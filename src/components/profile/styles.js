@@ -10,6 +10,21 @@ export default makeStyles((theme) => ({
     marginLeft: 150,
     marginTop: 150,
   },
+  searchBgColor:{
+    backgroundColor: theme.palette.centerBar,
+    border:"none"
+  },
+  centerBar: {
+    backgroundColor: theme.palette.centerBar,
+  },
+  followingBgColor: {
+    padding: 0,
+    backgroundColor: theme.palette.centerBar,
+    marginLeft: 200,
+    // marginBottom: 80,
+    paddingTop: 20,
+    paddingBottom: 20,
+  },
   profileImageForMobile: {
     width: 190,
     height: 190,
@@ -30,6 +45,17 @@ export default makeStyles((theme) => ({
   listOfProfile: {
     paddingLeft: 150,
     display: "flex",
+  },
+  settinTopBottom: {
+    marginTop: 20,
+    marginBottom: 20,
+  },
+  listOfProfileForMobile: {
+    // paddingLeft: 150,
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   profileListHeadings: {
     color: theme.palette.mediumGray,
@@ -55,6 +81,7 @@ export default makeStyles((theme) => ({
     fontSize: 30,
   },
   tabsName: {
+    paddingTop: "10px",
     paddingLeft: 20,
     paddingRight: 20,
     cursor: "pointer",

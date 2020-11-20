@@ -22,7 +22,7 @@ const Cards = (props) => {
 
   return (
     <>
-      <Grid item lg={6} md={12} sm={6} xs={12}>
+      <Grid item lg={6} md={6} sm={10} xs={12}>
         <Paper className={classes.paperStyling}>
           <div className={classes.cardContainer}>
             <ImageIcon className={classes.spaceIcons} />
@@ -62,7 +62,6 @@ const Cards = (props) => {
                   01:24:12 pm <span>|</span> 12/09/2020
                 </Typography>
               </div>
-
               <div
                 style={{
                   marginTop: 20,
@@ -76,27 +75,35 @@ const Cards = (props) => {
                     Tags
                   </Typography>
                 </div>
-                <div style={{ display: "flex", flexWrap: "wrap" }}>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Demo
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Sia
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Lunch
-                  </Typography>
-                </div>
-                <div>
-                  <EditOutlinedIcon className={classes.tagEditIcon} />
-                  <InfoOutlinedIcon className={classes.tagEditIcon} />
+                <div
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div style={{ display: "flex", flexWrap: "wrap" }}>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Demo
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Sia
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Lunch
+                    </Typography>
+                  </div>
+                  <div>
+                    <EditOutlinedIcon className={classes.tagEditIcon} style={{marginRight:8}}/>
+                    <InfoOutlinedIcon className={classes.tagEditIcon} />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </Paper>
       </Grid>
-      <Grid item lg={6} md={12} sm={6} xs={12}>
+      <Grid item lg={6} md={6} sm={10} xs={12}>
         <Paper className={classes.paperStyling}>
           <div className={classes.cardContainer}>
             <HeadsetIcon className={classes.spaceIcons} />
@@ -150,20 +157,28 @@ const Cards = (props) => {
                     Tags
                   </Typography>
                 </div>
-                <div style={{ display: "flex", flexWrap: "wrap" }}>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Demo
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Sia
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Lunch
-                  </Typography>
-                </div>
-                <div>
-                  <EditOutlinedIcon className={classes.tagEditIcon} />
-                  <InfoOutlinedIcon className={classes.tagEditIcon} />
+                <div
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div style={{ display: "flex", flexWrap: "wrap" }}>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Demo
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Sia
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Lunch
+                    </Typography>
+                  </div>
+                  <div>
+                    <EditOutlinedIcon className={classes.tagEditIcon} style={{marginRight:8}}/>
+                    <InfoOutlinedIcon className={classes.tagEditIcon} />
+                  </div>
                 </div>
               </div>
             </div>
@@ -171,7 +186,7 @@ const Cards = (props) => {
         </Paper>
       </Grid>
 
-      <Grid item lg={6} md={12} sm={6} xs={12}>
+      <Grid item lg={6} md={6} sm={10} xs={12}>
         <Paper className={classes.paperStyling}>
           <div className={classes.cardContainer}>
             <DescriptionOutlinedIcon className={classes.spaceIcons} />
@@ -225,20 +240,28 @@ const Cards = (props) => {
                     Tags
                   </Typography>
                 </div>
-                <div style={{ display: "flex", flexWrap: "wrap" }}>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Demo
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Sia
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Lunch
-                  </Typography>
-                </div>
-                <div>
-                  <EditOutlinedIcon className={classes.tagEditIcon} />
-                  <InfoOutlinedIcon className={classes.tagEditIcon} />
+                <div
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div style={{ display: "flex", flexWrap: "wrap" }}>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Demo
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Sia
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Lunch
+                    </Typography>
+                  </div>
+                  <div>
+                    <EditOutlinedIcon className={classes.tagEditIcon} style={{marginRight:8}}/>
+                    <InfoOutlinedIcon className={classes.tagEditIcon} />
+                  </div>
                 </div>
               </div>
             </div>
@@ -246,7 +269,7 @@ const Cards = (props) => {
         </Paper>
       </Grid>
 
-      <Grid item lg={6} md={12} sm={6} xs={12}>
+      <Grid item lg={6} md={6} sm={10} xs={12}>
         <Paper className={classes.paperStyling}>
           <div className={classes.cardContainer}>
             <VideocamOutlinedIcon className={classes.spaceIcons} />
@@ -300,20 +323,28 @@ const Cards = (props) => {
                     Tags
                   </Typography>
                 </div>
-                <div style={{ display: "flex", flexWrap: "wrap" }}>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Demo
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Sia
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Lunch
-                  </Typography>
-                </div>
-                <div>
-                  <EditOutlinedIcon className={classes.tagEditIcon} />
-                  <InfoOutlinedIcon className={classes.tagEditIcon} />
+                <div
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div style={{ display: "flex", flexWrap: "wrap" }}>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Demo
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Sia
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Lunch
+                    </Typography>
+                  </div>
+                  <div>
+                    <EditOutlinedIcon className={classes.tagEditIcon} style={{marginRight:8}}/>
+                    <InfoOutlinedIcon className={classes.tagEditIcon} />
+                  </div>
                 </div>
               </div>
             </div>

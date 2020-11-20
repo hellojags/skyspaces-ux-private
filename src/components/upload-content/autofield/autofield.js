@@ -4,6 +4,7 @@ import NoSsr from "@material-ui/core/NoSsr";
 import CheckIcon from "@material-ui/icons/Check";
 import CloseIcon from "@material-ui/icons/Close";
 import styled from "styled-components";
+import { useTheme } from "@material-ui/core/styles";
 
 const Label = styled("label")`
   padding: 0 0 4px;
@@ -126,6 +127,8 @@ const Listbox = styled("ul")`
 `;
 
 export default function CustomizedHook() {
+  const theme = useTheme();
+
   const {
     getRootProps,
     getInputLabelProps,
@@ -153,7 +156,11 @@ export default function CustomizedHook() {
           <InputWrapper
             ref={setAnchorEl}
             className={focused ? "focused" : ""}
-            style={{ borderRadius: "100px", padding: "5px 10px" }}
+            style={{
+              borderRadius: "100px",
+              padding: "5px 10px",
+              backgroundColor: theme.palette.headerBgColor,
+            }}
           >
             {value.map((option, index) => (
               <Tag
@@ -168,7 +175,14 @@ export default function CustomizedHook() {
               />
             ))}
 
-            <input {...getInputProps()} style={{ borderRadius: "100px" }} />
+            <input
+            placeholder="category"
+              {...getInputProps()}
+              style={{
+                borderRadius: "100px",
+                backgroundColor: theme.palette.headerBgColor,
+              }}
+            />
           </InputWrapper>
         </div>
         {groupedOptions.length > 0 ? (

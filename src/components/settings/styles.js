@@ -24,13 +24,16 @@ export default makeStyles((theme) => ({
     paddingBottom: "40px",
     // boxShadow: "5px 5px 9px 5px #E6E6E6",
     boxShadow: "none",
+    backgroundColor:theme.palette.whiteBgColor
   },
   tabsPaper_settings: {
     padding: "0px",
     boxShadow: "none",
+    backgroundColor:theme.palette.whiteBgColor
+
   },
   settings_title: {
-    color: theme.palette.primary.textColor,
+    color: theme.palette.linksColor,
     textAlign: "left",
     fontWeight: "500",
     fontSize: "20px",
@@ -44,6 +47,12 @@ export default makeStyles((theme) => ({
 
   backup_btn: {
     backgroundColor: theme.palette.primary.main,
+    "&&&:focus": {
+      outline: "none",
+    },
+    "&&&:hover": {
+      backgroundColor: "darkgreen",
+    },
   },
   lable_skylink_inpt_settings: {
     textAlign: "left",
@@ -55,8 +64,14 @@ export default makeStyles((theme) => ({
   skynetPortal_inpt: {
     width: "90%",
     textAlign: "left",
+    borderBottom:"1px solid white"
   },
   skynetPortal_MI: {
     color: `${theme.palette.primary.main}`,
+  },
+  save_btn_settings: {
+    "&&&:focus": {
+      outline: "none !important",
+    },
   },
 }));

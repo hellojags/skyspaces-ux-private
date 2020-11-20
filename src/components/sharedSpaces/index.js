@@ -13,7 +13,7 @@ import Select from "@material-ui/core/Select";
 import { withStyles } from "@material-ui/core/styles";
 import InputBase from "@material-ui/core/InputBase";
 import LowPriorityIcon from "@material-ui/icons/LowPriority";
-import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import Cards from "./cards";
 
 /**
@@ -50,7 +50,7 @@ const SharedSpaces = (props) => {
   };
 
   return (
-    <Grid container spacing={3} style={{ width: "100%",margin:0 }}>
+    <Grid container spacing={3} style={{ width: "100%", margin: 0 }}>
       <Grid item xs={12}>
         <Typography variant="span" className={classes.sharedSpaceHeading}>
           Shared Spaces
@@ -81,9 +81,10 @@ const SharedSpaces = (props) => {
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-end",
+          // borderRadius: "10px",
         }}
       >
-        <LowPriorityIcon />
+        <LowPriorityIcon className={classes.filterLeftIcon} />
         <FormControl className={classes.formControl}>
           <Select
             input={<BootstrapInput />}

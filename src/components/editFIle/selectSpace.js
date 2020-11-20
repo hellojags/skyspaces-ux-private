@@ -35,7 +35,7 @@ const AuthComponent = (props) => {
         {/*  All */}
         <Typography
           variant="span"
-          className={classes.selectSpaces_title_head_Alltext}
+          className={classes.ss_title_head_image_text}
         >
           Super Space
         </Typography>

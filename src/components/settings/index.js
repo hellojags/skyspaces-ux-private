@@ -69,7 +69,7 @@ const AuthComponent = (props) => {
                     variant="contained"
                     color="primary"
                     size="small"
-                    className={`save_btn_settings ${classes.button}`}
+                    className={`save_btn_settings ${classes.button} ${classes.save_btn_settings}`}
                     startIcon={<SaveIcon />}
                     style={{ color: "white", marginLeft: "15px" }}
                   >
@@ -81,7 +81,8 @@ const AuthComponent = (props) => {
                   style={{
                     display: "flex",
                     justifyContent: "center",
-                    boxShadow: "5px 5px 9px 5px #E6E6E6",
+                    // boxShadow: "0px 0px 5px 8px rgba(50, 50, 50, 0.14)",
+                    boxShadow: "0 0 10px rgba(0,0,0,.4)",
                     borderRadius: "10px",
                   }}
                 >
@@ -99,7 +100,14 @@ const AuthComponent = (props) => {
                     Create Backup
                   </Button>
                 </div>
-                <div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    boxShadow: "0px 0px 5px 8px rgba(50, 50, 50, 0.14)",
+                    borderRadius: "10px",
+                  }}
+                >
                   <Table2 />
                 </div>
               </Grid>

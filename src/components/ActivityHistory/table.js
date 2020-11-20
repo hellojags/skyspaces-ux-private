@@ -109,6 +109,7 @@ function EnhancedTableHead(props) {
       <TableRow>
         <TableCell padding="checkbox">
           <Checkbox
+            className={classes.cellColors}
             indeterminate={numSelected > 0 && numSelected < rowCount}
             checked={rowCount > 0 && numSelected === rowCount}
             onChange={onSelectAllClick}
@@ -117,6 +118,7 @@ function EnhancedTableHead(props) {
         </TableCell>
         {headCells.map((headCell) => (
           <TableCell
+            className={classes.cellColors}
             key={headCell.id}
             align={headCell.numeric ? "center" : "left"}
             style={{ paddingLeft: "17px" }}
@@ -222,6 +224,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     width: "100%",
     marginBottom: theme.spacing(2),
+    backgroundColor:theme.palette.headerBgColor
   },
   table: {
     minWidth: 750,
@@ -236,6 +239,9 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     top: 20,
     width: 1,
+  },
+  cellColors: {
+    color: theme.palette.linksColor,
   },
 }));
 
@@ -337,11 +343,13 @@ export default function EnhancedTable() {
                     >
                       <TableCell padding="checkbox">
                         <Checkbox
+                          className={classes.cellColors}
                           checked={isItemSelected}
                           inputProps={{ "aria-labelledby": labelId }}
                         />
                       </TableCell>
                       <TableCell
+                        className={classes.cellColors}
                         component="th"
                         id={labelId}
                         scope="row"
@@ -349,9 +357,13 @@ export default function EnhancedTable() {
                       >
                         {row.fileName}
                       </TableCell>
-                      <TableCell align="center">{row.activityTime}</TableCell>
-                      <TableCell align="center">{row.activityType}</TableCell>
-                      <TableCell align="center">
+                      <TableCell className={classes.cellColors} align="center">
+                        {row.activityTime}
+                      </TableCell>
+                      <TableCell className={classes.cellColors} align="center">
+                        {row.activityType}
+                      </TableCell>
+                      <TableCell className={classes.cellColors} align="center">
                         <Chip size="small" label={row.spaces} />
                       </TableCell>
                     </TableRow>
@@ -361,6 +373,7 @@ export default function EnhancedTable() {
           </Table>
         </TableContainer>
         <TablePagination
+          className={classes.cellColors}
           rowsPerPageOptions={[5, 10, 25]}
           component="div"
           count={rows.length}

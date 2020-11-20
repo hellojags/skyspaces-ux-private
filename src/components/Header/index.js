@@ -2,34 +2,63 @@ import React from "react";
 import "./css/index.css";
 import AppsIcon from "@material-ui/icons/Apps";
 import UserMenu from "./menu";
-import { useTheme } from "@material-ui/core/styles";
+import { useTheme, makeStyles } from "@material-ui/core/styles";
 import { useHistory } from "react-router-dom";
-import MenuIcon from '@material-ui/icons/Menu';
+import MenuIcon from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
+import SmallLogo from "./images/smLogo.png";
 import Drawer from "../drawer";
+// import classes from "*.module.css";
+
+const useStyles = makeStyles((theme) => ({
+  headerBgColorSet: {
+    backgroundColor: theme.palette.headerBgColor,
+  },
+  searchBarBg: {
+    backgroundColor: theme.palette.centerBar,
+    // border:"none"
+  },
+}));
 
 function Component1(props) {
   const theme = useTheme();
+  const classes = useStyles();
   const [userMenu, setUserMenu] = React.useState(null);
   const history = useHistory();
   const [anchor, setAnchor] = React.useState("");
   const [isTrue, setIsTrue] = React.useState(false);
+  const [activeDarkBck, setActiveDarkBck] = React.useState(false);
 
   const userMenuClick = (event) => {
     setUserMenu(event.currentTarget);
   };
 
-  const handleDrawer=()=>{
+  const handleDrawer = () => {
     setAnchor("left");
     isTrue(true);
-  }
+  };
+
+  React.useEffect(() => {
+    let getMode = localStorage.getItem("darkMode");
+    if (getMode === "true") {
+      setActiveDarkBck(true);
+    } else {
+      setActiveDarkBck(false);
+    }
+  }, [localStorage.getItem("darkMode")]);
 
   return (
     <>
-      <UserMenu userMenu={userMenu} setUserMenu={setUserMenu} />
+      <UserMenu
+        userMenu={userMenu}
+        setUserMenu={setUserMenu}
+        handleDarkMode={props.handleDarkMode}
+      />
       <div>
         <div className="container-fluid main-container">
-          <nav className="navbar navbar-light hdr-nvbr-main">
+          <nav
+            className={`navbar navbar-light hdr-nvbr-main ${classes.headerBgColorSet}`}
+          >
             {props.sideBar && (
               <Drawer anchor={anchor} isTrue={isTrue} setIsTrue={setIsTrue} />
             )}
@@ -56,9 +85,9 @@ function Component1(props) {
               </button>
             )}
             <a
-              className={`${"navbar-brand"} ${"navi-brnd"} ${
-                props.authRoute && "logoAlignMent"
-              }`}
+              className={`${"navbar-brand"} ${
+                props.authRoute ? "auth-navi-brand" : "navi-brnd"
+              } ${props.authRoute && "logoAlignMent"}`}
             >
               {/* logo */}
               <img
@@ -73,6 +102,7 @@ function Component1(props) {
                 height="40"
                 width="170"
               />
+
               {/* search input */}
               {props.authRoute ? null : (
                 <>
@@ -82,25 +112,47 @@ function Component1(props) {
                     </span>
 
                     <input
-                      className="form-control mr-sm-2 srch_inpt"
+                      className={`form-control mr-sm-2 srch_inpt ${classes.searchBarBg}`}
+                      style={{
+                        border: `${
+                          activeDarkBck === true
+                            ? "none"
+                            : "1px solid lightgray"
+                        }`,
+                      }}
                       type="search"
                       placeholder="Search in SkySpaces or download Skylink"
                       aria-label="Search"
                     />
-                  </div>
-                  {/* search inside nav-brand */}
-                  <div className="srch_btn_main_div">
-                    <button className="btn srch_btn_nvbar">
-                      <label for="hidden-search-inpt">
-                        <i className="fa fa-download icon_download_nvbar"></i>
-                      </label>
-                    </button>
-                    <input type="file" id="hidden-search-inpt" />
+                    {/* search inside nav-brand */}
+                    <div className="srch_btn_main_div">
+                      <button className="btn srch_btn_nvbar">
+                        <label for="hidden-search-inpt">
+                          <i className="fa fa-download icon_download_nvbar"></i>
+                        </label>
+                      </button>
+                      <input type="file" id="hidden-search-inpt" />
+                    </div>
                   </div>
                 </>
               )}
             </a>
 
+            <a className="small_logo_nvbrnd">
+              {/* small logo */}
+              <img
+                style={{ cursor: "pointer" }}
+                onClick={() => history.push("/dashboard")}
+                src={SmallLogo}
+                width="30"
+                height="30"
+                className=" smallLogo_header"
+                alt=""
+                loading="lazy"
+                height="35"
+                width="35"
+              />
+            </a>
             {/* search outside nav-brand */}
             {props.authRoute ? null : (
               <div className="srch_btn_out_main_div">
@@ -143,6 +195,7 @@ function Component1(props) {
                   <div className="signUp-butn-main-out-div">
                     <button
                       onClick={() => history.push("/auth")}
+                      style={{ border: "1px solid #1ed660" }}
                       type="button"
                       class="btn  btn-sm butn-out-signup"
                     >
@@ -154,7 +207,8 @@ function Component1(props) {
                 <div
                   onClick={userMenuClick}
                   style={{
-                    boxShadow: "3px 3px 10px 0px rgba(50, 50, 50, 0.75)",
+                    // boxShadow: "0px 0px 5px 8px rgba(50, 50, 50, 0.14)",
+                    boxShadow: "0 0 10px rgba(0,0,0,.4)",
                     backgroundColor: theme.palette.primary.main,
                     borderRadius: "50%",
                     width: 45,
@@ -175,12 +229,22 @@ function Component1(props) {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <div className="search_main_in_div">
-                  <span className="srch-icon-inside-field-input-inside-cllpse-span">
-                    <i className="fas fa-search srch-icon-inside-field-input-inside-cllpse"></i>
+                  <span
+                    className="srch-icon-inside-field-input-inside-cllpse-span"
+                    style={{ position: "relative" }}
+                  >
+                    <i
+                      style={{
+                        position: "absolute",
+                        marginTop: "7px",
+                        left: "20px",
+                      }}
+                      className="fas fa-search srch-icon-inside-field-input-inside-cllpse"
+                    ></i>
                   </span>
 
                   <input
-                    className="form-control mr-sm-2 srch_inpt inside-srch-cllpse-inpt"
+                    className="form-control mr-sm-2 srch_inpt inside-srch-cllpse-inpt set-left-margin"
                     type="search"
                     placeholder="Search in SkySpaces or download Skylink"
                     aria-label="Search"
@@ -191,6 +255,7 @@ function Component1(props) {
                   <button
                     onClick={() => history.push("/auth")}
                     type="button"
+                    style={{ border: "1px solid #1ed660" }}
                     class="btn btn-success btn-sm butn-inside-clps-nvbr"
                   >
                     Login
@@ -199,6 +264,7 @@ function Component1(props) {
                 <div className="signUp-butn-main-div">
                   <button
                     onClick={() => history.push("/auth")}
+                    style={{ border: "1px solid #1ed660" }}
                     type="button"
                     class="btn btn-success btn-sm butn-inside-clps-nvbr"
                   >

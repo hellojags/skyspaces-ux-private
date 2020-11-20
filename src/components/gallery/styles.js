@@ -4,13 +4,22 @@ export default makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  appsIcon: {
+    color: theme.palette.linksColor,
+  },
+  reOrdered: {
+    color: theme.palette.linksColor,
+  },
+  lowPriorIcon: {
+    color: theme.palette.linksColor,
+  },
   paper: {
     padding: theme.spacing(2),
     textAlign: "center",
     color: theme.palette.text.secondary,
   },
   input: {
-    display: 'none',
+    display: "none",
   },
   sharedSpaceButn: {
     color: "white",
@@ -46,13 +55,15 @@ export default makeStyles((theme) => ({
     paddingBottom: "40px",
     // boxShadow: "5px 5px 9px 5px #E6E6E6",
     boxShadow: "none",
+    backgroundColor: theme.palette.whiteBgColor,
   },
   tabsPaper_gallery: {
     padding: "0px",
     boxShadow: "none",
+    backgroundColor: theme.palette.whiteBgColor,
   },
   gallery_title: {
-    color: theme.palette.primary.textColor,
+    color: theme.palette.linksColor,
     textAlign: "left",
     fontWeight: "500",
     fontSize: "20px",
@@ -80,8 +91,15 @@ export default makeStyles((theme) => ({
     color: `${theme.palette.primary.textColor}`,
     fontSize: "13px",
   },
+  gallery_title_head_Alltext_menu: {
+    background: `${theme.palette.lightGray}`,
+    padding: "15px 50px",
+    borderRadius: "5px",
+    color: `${theme.palette.primary.textColor}`,
+    fontSize: "13px",
+  },
   innerValue_All: {
-    background: "#EAEAEA",
+    background: theme.palette.spacesTabsCount,
     borderRadius: "100%",
     marginLeft: "7px",
     fontSize: "11px",

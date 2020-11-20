@@ -1,7 +1,9 @@
 import "./css/index.css";
 function Component4(props) {
   return (
-    <div className="container-fluid">
+    <div
+      className="container-fluid"
+    >
       <div className="row c4-row-div">
         <div className="col-xl-4 col-lg-4 col-md-4 col-sm-3 image-logo_col-footer">
           <img

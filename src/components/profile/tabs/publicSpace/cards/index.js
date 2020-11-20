@@ -7,7 +7,7 @@ import EditOutlinedIcon from "@material-ui/icons/EditOutlined";
 import HeadsetIcon from "@material-ui/icons/Headset";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import { useTheme } from "@material-ui/core/styles";
-import Pagination from '@material-ui/lab/Pagination';
+import Pagination from "@material-ui/lab/Pagination";
 
 /**
  * @author
@@ -22,7 +22,14 @@ const Cards = (props) => {
     <>
       {[0, 1, 2].map((i) => {
         return (
-          <Grid item lg={12} md={12} sm={12} xs={12}>
+          <Grid
+            item
+            lg={12}
+            md={12}
+            sm={12}
+            xs={12}
+            className="main_crad_prfl_grid"
+          >
             <Paper className={classes.paperStyling}>
               <div className={classes.cardContainer}>
                 <HeadsetIcon className={classes.spaceIcons} />
@@ -167,7 +174,7 @@ const Cards = (props) => {
           paddingBottom: 10,
         }}
       >
-        <Pagination count={5} />
+        <Pagination count={5} className={classes.paginationColor} />
       </div>
     </>
   );

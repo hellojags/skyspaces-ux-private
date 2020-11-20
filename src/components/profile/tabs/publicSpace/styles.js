@@ -5,6 +5,9 @@ export default makeStyles((theme) => ({
     color: theme.palette.linksColor,
     fontSize: 20,
   },
+  paginationColor:{
+    color:theme.palette.linksColor
+  },
   sharedSpaceButn: {
     color: "white",
     borderRadius: 10,
@@ -54,7 +57,9 @@ export default makeStyles((theme) => ({
     borderRadius: 10,
     padding: 15,
     // cursor:"pointer",
-    boxShadow: "3px 3px 10px 0px rgba(50, 50, 50, 0.75)",
+    // boxShadow: "0px 0px 5px 8px rgba(50, 50, 50, 0.14)",
+    boxShadow: "0 0 10px rgba(0,0,0,.4)",
+    backgroundColor:theme.palette.headerBgColor
   },
   rightSideTop: {
     display: "flex",

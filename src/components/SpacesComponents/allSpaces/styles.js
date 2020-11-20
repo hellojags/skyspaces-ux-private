@@ -38,7 +38,7 @@ export default makeStyles((theme) => ({
   spaceIcons: {
     color: theme.palette.primary.main,
     fontSize: 40,
-    fontWeight:400
+    fontWeight: 400,
   },
   spaceName: {
     color: theme.palette.primary.main,
@@ -52,7 +52,10 @@ export default makeStyles((theme) => ({
   },
   paperStyling: {
     padding: 15,
-    boxShadow: "3px 3px 10px 0px rgba(50, 50, 50, 0.75)",
+    // boxShadow: "0px 0px 5px 8px rgba(50, 50, 50, 0.14)",
+    boxShadow: "0 0 10px rgba(0,0,0,.4)",
+    borderRadius: "10px",
+    backgroundColor: theme.palette.headerBgColor,
   },
   rightSideTop: {
     display: "flex",
@@ -75,7 +78,7 @@ export default makeStyles((theme) => ({
   paragraph: {
     color: theme.palette.mediumGray,
     fontSize: 11.5,
-    lineHeight:"0px !important"
+    lineHeight: "0px !important",
   },
   status: {
     color: theme.palette.linksColor,

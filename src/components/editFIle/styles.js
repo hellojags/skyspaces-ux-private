@@ -4,6 +4,14 @@ export default makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  input: {
+    color: theme.palette.linksColor,
+    borderBottom: "1px solid white !important",
+  },
+  desc: {
+    color: theme.palette.linksColor,
+    border: "1px solid white !important",
+  },
   paper: {
     padding: theme.spacing(2),
     textAlign: "center",
@@ -24,14 +32,16 @@ export default makeStyles((theme) => ({
     paddingBottom: "40px",
     // boxShadow: "5px 5px 9px 5px #E6E6E6",
     boxShadow: "none",
+    backgroundColor: theme.palette.headerBgColor,
   },
   tabsPaper_ef: {
     padding: "0px",
     boxShadow: "none",
+    backgroundColor: theme.palette.headerBgColor,
   },
   title1_ef: {
     textAlign: "left",
-    color: `${theme.palette.primary.textColor}`,
+    color: `${theme.palette.linksColor}`,
   },
   titleOng_ef: {
     textAlign: "left",
@@ -85,8 +95,32 @@ export default makeStyles((theme) => ({
     color: `${theme.palette.primary.textColor}`,
     fontSize: "13px",
     marginLeft: "15px",
-    "&:focus": {
-      background: `${theme.palette.lightGreen}`,
+    border: `1px solid white`,
+  },
+  ef_delbtn: {
+    marginRight: "20px",
+    background: "#ff3d3d",
+    "&&&:focus": {
+      outline: "none",
+    },
+    "&&&:hover": {
+      background: "#ff3d3d",
+    },
+  },
+
+  ef_saveBtn: {
+    marginRight: "20px",
+    color: "white",
+    "&&&:focus": {
+      outline: "none",
+    },
+  },
+
+  ef_doneBtn: {
+    marginRight: "20px",
+    color: "white",
+    "&&&:focus": {
+      outline: "none",
     },
   },
 }));

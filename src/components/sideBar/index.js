@@ -19,6 +19,18 @@ import { Route, Link, Switch, BrowserRouter as Router } from "react-router-dom";
 import UploadContent from "../upload-content";
 import SpacesTabs from "../spacesTabs";
 import SharedSpaces from "../sharedSpaces";
+import ActivityHistory from "../ActivityHistory/index";
+import Settings from "../settings/index";
+import EditFIle from "../editFIle/index";
+import { AiOutlineUpload } from "react-icons/ai";
+import editDocIcon from "./images/writing.png";
+import { BiCoinStack } from "react-icons/bi";
+import { ImTree } from "react-icons/im";
+import { FaShareSquare } from "react-icons/fa";
+import FooterDashboard from "../Footer/simpleFooter";
+import SettingComponent from "../settings";
+import InnerIcon from "./images/icon.jpeg";
+import { BsFileText } from "react-icons/bs";
 
 // import Header from "../Header";
 // import { Switch } from "@material-ui/core";
@@ -41,7 +53,7 @@ const SideBar = (props) => {
           {/* for section one */}
 
           <div className={classes.linksStyles}>
-            <BackupIcon className={classes.iconStyling} />
+            <AiOutlineUpload className={classes.iconStyling} />
             <Typography variant="span">
               <Link to="/dashboard" className={classes.linkName}>
                 Upload
@@ -57,7 +69,12 @@ const SideBar = (props) => {
           </div>
 
           <div className={classes.linksStyles}>
-            <ExitToAppIcon className={classes.iconStyling} />
+            {/* <img
+              src={editDocIcon}
+              className={classes.iconStyling}
+              style={{ height: "20px" }}
+            /> */}
+            <BsFileText className={classes.iconStyling} />
             <Typography variant="span" className={classes.linkName}>
               Register
             </Typography>
@@ -66,7 +83,7 @@ const SideBar = (props) => {
           {/* for section two */}
           <div className={classes.spaceLinkStyle}>
             <span>
-              <VerticalSplitOutlinedIcon className={classes.spaceIcon} />
+              <BiCoinStack className={classes.spaceIcon} />
               <Typography variant="span">
                 <Link to="/dashboard/spaces" className={classes.linkName}>
                   Spaces
@@ -86,9 +103,9 @@ const SideBar = (props) => {
               </Typography>
             </span>
             <span>
-              <EditOutlinedIcon className={classes.editIconStyle} />
+              {/* <EditOutlinedIcon className={classes.editIconStyle} /> */}
 
-              <ScreenShareIcon className={classes.shareIconStyle} />
+              <FaShareSquare className={classes.shareIconStyle} />
             </span>
           </div>
           <div className={classes.spacesCont}>
@@ -99,9 +116,9 @@ const SideBar = (props) => {
               </Typography>
             </span>
             <span>
-              <EditOutlinedIcon className={classes.editIconStyle} />
+              {/* <EditOutlinedIcon className={classes.editIconStyle} /> */}
 
-              <ScreenShareIcon className={classes.shareIconStyle} />
+              <FaShareSquare className={classes.shareIconStyle} />
             </span>
           </div>
           <div className={classes.spacesCont}>
@@ -112,9 +129,9 @@ const SideBar = (props) => {
               </Typography>
             </span>
             <span>
-              <EditOutlinedIcon className={classes.editIconStyle} />
+              {/* <EditOutlinedIcon className={classes.editIconStyle} /> */}
 
-              <ScreenShareIcon className={classes.shareIconStyle} />
+              <FaShareSquare className={classes.shareIconStyle} />
             </span>
           </div>
           <div className={classes.spacesCont}>
@@ -125,9 +142,9 @@ const SideBar = (props) => {
               </Typography>
             </span>
             <span>
-              <EditOutlinedIcon className={classes.editIconStyle} />
+              {/* <EditOutlinedIcon className={classes.editIconStyle} /> */}
 
-              <ScreenShareIcon className={classes.shareIconStyle} />
+              <FaShareSquare className={classes.shareIconStyle} />
             </span>
           </div>
           <div className={classes.spacesCont}>
@@ -138,9 +155,9 @@ const SideBar = (props) => {
               </Typography>
             </span>
             <span>
-              <EditOutlinedIcon className={classes.editIconStyle} />
+              {/* <EditOutlinedIcon className={classes.editIconStyle} /> */}
 
-              <ScreenShareIcon className={classes.shareIconStyle} />
+              <FaShareSquare className={classes.shareIconStyle} />
             </span>
           </div>
           <div className={classes.spacesCont}>
@@ -151,15 +168,15 @@ const SideBar = (props) => {
               </Typography>
             </span>
             <span>
-              <EditOutlinedIcon className={classes.editIconStyle} />
+              {/* <EditOutlinedIcon className={classes.editIconStyle} /> */}
 
-              <ScreenShareIcon className={classes.shareIconStyle} />
+              <FaShareSquare className={classes.shareIconStyle} />
             </span>
           </div>
 
           <div className={classes.spaceLinkStyle}>
             <span>
-              <WifiIcon className={classes.iconStyling} />
+              <ImTree className={classes.iconStyling} />
               <Typography variant="span">
                 <Link to="/dashboard/sharedSpaces" className={classes.linkName}>
                   {" "}
@@ -170,6 +187,75 @@ const SideBar = (props) => {
             <span>
               <AddCircleOutlineIcon className={classes.spaceIcon} />
             </span>
+          </div>
+
+          <div className={classes.sideProf_div}>
+            {/* 1st side Inner icon */}
+            <div className={classes.innerSideProf_div}>
+              <div className={classes.icon_side_inner_div}>
+                <img
+                  src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  style={{
+                    width: "25px",
+                    borderRadius: "100%",
+                    height: "25px",
+                  }}
+                />
+              </div>
+              <div style={{ paddingLeft: "20px", marginTop: "-5px" }}>
+                <span
+                  style={{ fontSize: "12px" }}
+                  className={classes.sharedSpace_names}
+                >
+                  jollyvector
+                </span>
+                <div className={classes.icon_sub_title_div}>
+                  Video Space
+                  <span style={{ color: "#1ed660", paddingLeft: "7px" }}>
+                    (13)
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* 2nd side inner icon */}
+
+            <div className={classes.innerSideProf2_div}>
+              <div className={classes.icon_side_inner_div}>
+                <img
+                  src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  style={{
+                    width: "25px",
+                    borderRadius: "100%",
+                    height: "25px",
+                  }}
+                />
+              </div>
+              <div style={{ paddingLeft: "20px", marginTop: "-5px" }}>
+                <span
+                  style={{ fontSize: "12px" }}
+                  className={classes.sharedSpace_names}
+                >
+                  jollyvector
+                </span>
+                <div className={classes.icon_sub_title_div}>
+                  Audio Space
+                  <span style={{ color: "#1ed660", paddingLeft: "7px" }}>
+                    (25)
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style={{ paddingTop: "30px" }}>
+            <div className={classes.image_logo_sideBarfooter}>
+              <img
+                src="https://skyspaces.io/static/media/Sia.7dd07c88.svg"
+                height="60"
+                width="60"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -207,14 +293,19 @@ const SideBar = (props) => {
           </Hidden>
         ) : null}
       </nav>
-      <main className={matches ? classes.content : null}>
+      <main className={matches ? classes.content : classes.contentBgColor}>
         <Route
           exact
           path="/dashboard"
           render={() => {
             return (
               <React.Fragment>
-                <div style={{ paddingTop: 40 }}>
+                <div
+                  style={{
+                    paddingTop: 40,
+                    minHeight: "calc(100vh - 70px)",
+                  }}
+                >
                   <UploadContent />
                 </div>
               </React.Fragment>
@@ -227,7 +318,9 @@ const SideBar = (props) => {
           render={() => {
             return (
               <React.Fragment>
-                <div style={{ paddingTop: 70 }}>
+                <div
+                  style={{ paddingTop: 70, minHeight: "calc(100vh - 100px)" }}
+                >
                   <SpacesTabs />
                 </div>
               </React.Fragment>
@@ -240,13 +333,43 @@ const SideBar = (props) => {
           render={() => {
             return (
               <React.Fragment>
-                <div style={{ paddingTop: 70 }}>
+                <div style={{ paddingTop: 70, minHeight: "100vh" }}>
                   <SharedSpaces />
                 </div>
               </React.Fragment>
             );
           }}
         />
+
+        <Route
+          path="/dashboard/setting"
+          render={() => {
+            return (
+              <React.Fragment>
+                <div style={{ paddingTop: 70 }}>
+                  <SettingComponent />
+                </div>
+              </React.Fragment>
+            );
+          }}
+        />
+
+        <Route
+          path="/dashboard/history"
+          render={() => {
+            return (
+              <React.Fragment>
+                <div style={{ paddingTop: 40 }}>
+                  <ActivityHistory />
+                </div>
+              </React.Fragment>
+            );
+          }}
+        />
+
+        <div>
+          <FooterDashboard />
+        </div>
       </main>
     </div>
   );

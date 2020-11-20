@@ -2,9 +2,21 @@ import React from "react";
 import "./css/index.css";
 import { DropzoneArea } from "material-ui-dropzone";
 import ImageIcon from "@material-ui/icons/Image";
+// import classes from "*.module.css";
+import { useTheme,makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  setUploadContentBg: {
+    backgroundColor: theme.palette.headerBgColor,
+  },
+  pasteInput:{
+    backgroundColor: theme.palette.headerBgColor,
+  }
+}));
 
 function Component3(props) {
   const [thumbnail, setThumb] = React.useState("");
+  const classes = useStyles();
 
   const handleImage = (files) => {
     if (files.length) {
@@ -15,9 +27,9 @@ function Component3(props) {
     setThumb("");
   };
   return (
-    <div className="container-fluid">
+    <div className="container-fluid main-upload-component">
       <div className="container most-main-div">
-        <div className="main-cntner">
+        <div className={`main-cntner ${classes.setUploadContentBg}`}>
           <div className="row main-rw-row-div">
             {/* column 1 */}
 
@@ -86,14 +98,14 @@ function Component3(props) {
                 <div className="input-group mb-3">
                   <input
                     type="text"
-                    className="form-control colum2-input-with-icon"
+                    className={`form-control colum2-input-with-icon ${classes.pasteInput}`}
                     aria-label="Amount (to the nearest dollar)"
                     placeholder="Please Enter Skylink to download"
                   />
                   <div className="input-group-append">
                     <span className="input-group-text icon-inpt-colum2">
                       {/* icon  */}
-                      <div className="srch_btn_main_div">
+                      <div className="srch_btn_main_div_changed">
                         <i className="fa fa-download colum2-icon-dwnload"></i>
                       </div>
                     </span>

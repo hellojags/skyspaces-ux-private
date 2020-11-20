@@ -62,6 +62,9 @@ const AuthComponent = (props) => {
               <TextField
                 id="standard-basic"
                 style={{ width: "100%" }}
+                InputProps={{
+                  className: classes.input,
+                }}
                 placeholder="FAlseFsFas53ws67yThsgyH"
               />
               {/*File Name input label and input */}
@@ -73,6 +76,9 @@ const AuthComponent = (props) => {
               {/* input File name */}
 
               <TextField
+               InputProps={{
+                className: classes.input,
+              }}
                 id="standard-basic"
                 style={{ width: "100%" }}
                 placeholder="vevo cross the limits"
@@ -81,6 +87,9 @@ const AuthComponent = (props) => {
 
               {/* description */}
               <TextField
+               InputProps={{
+                className: classes.desc,
+              }}
                 className={classes.description_inpt_ef}
                 placeholder="Description..."
                 variant="outlined"
@@ -109,6 +118,9 @@ const AuthComponent = (props) => {
               {/* input File name */}
 
               <TextField
+               InputProps={{
+                className: classes.input,
+              }}
                 id="standard-basic"
                 style={{ width: "100%" }}
                 placeholder="Images"
@@ -128,7 +140,7 @@ const AuthComponent = (props) => {
                     color="secondary"
                     size="small"
                     startIcon={<DeleteIcon />}
-                    style={{ marginRight: "20px", background: "#ff3d3d" }}
+                    className={classes.ef_delbtn}
                   >
                     Delete
                   </Button>
@@ -137,9 +149,8 @@ const AuthComponent = (props) => {
                     variant="contained"
                     color="primary"
                     size="small"
-                    className={classes.button}
+                    className={`${classes.button}  ${classes.ef_saveBtn}`}
                     startIcon={<SaveIcon />}
-                    style={{ marginRight: "20px", color: "white" }}
                     onClick={() => setSecondOpen(true)}
                   >
                     Save
@@ -149,9 +160,8 @@ const AuthComponent = (props) => {
                     variant="contained"
                     color="primary"
                     size="small"
-                    className={classes.button}
+                    className={`${classes.button}  ${classes.ef_doneBtn}`}
                     startIcon={<CheckCircleIcon />}
-                    style={{ marginRight: "20px", color: "white" }}
                     onClick={() => setOpen(true)}
                   >
                     Done

@@ -4,6 +4,7 @@ import NoSsr from "@material-ui/core/NoSsr";
 import CheckIcon from "@material-ui/icons/Check";
 import CloseIcon from "@material-ui/icons/Close";
 import styled from "styled-components";
+import { useTheme } from "@material-ui/core/styles";
 
 const Label = styled("label")`
   padding: 0 0 4px;
@@ -126,6 +127,8 @@ const Listbox = styled("ul")`
 `;
 
 export default function CustomizedHook() {
+  const theme = useTheme();
+
   const {
     getRootProps,
     getInputLabelProps,
@@ -159,6 +162,9 @@ export default function CustomizedHook() {
               borderRight: "none",
               borderLeft: "none",
               marginTop: "15px",
+              border:"1px solid white",
+              padding:5,
+              backgroundColor: theme.palette.headerBgColor,
             }}
           >
             {value.map((option, index) => (
@@ -174,7 +180,12 @@ export default function CustomizedHook() {
               />
             ))}
 
-            <input {...getInputProps()} />
+            <input
+              {...getInputProps()}
+              style={{
+                backgroundColor: theme.palette.headerBgColor,
+              }}
+            />
           </InputWrapper>
         </div>
         {groupedOptions.length > 0 ? (

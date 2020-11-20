@@ -31,7 +31,9 @@ const Cards = (props) => {
           onClick={() => setCardChecked(0)}
           style={{
             backgroundColor:
-              cardChecked === 0 ? theme.palette.lightGreen : null,
+              cardChecked === 0
+                ? theme.palette.lightGreen
+                : theme.palette.headerBgColor,
           }}
         >
           <div className={classes.cardContainer}>
@@ -86,20 +88,31 @@ const Cards = (props) => {
                     Tags
                   </Typography>
                 </div>
-                <div style={{ display: "flex", flexWrap: "wrap" }}>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Demo
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Sia
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Lunch
-                  </Typography>
-                </div>
-                <div>
-                  <EditOutlinedIcon className={classes.tagEditIcon} />
-                  <InfoOutlinedIcon className={classes.tagEditIcon} />
+                <div
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div style={{ display: "flex", flexWrap: "wrap" }}>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Demo
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Sia
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Lunch
+                    </Typography>
+                  </div>
+                  <div>
+                    <EditOutlinedIcon
+                      className={classes.tagEditIcon}
+                      style={{ marginRight: 8 }}
+                    />
+                    <InfoOutlinedIcon className={classes.tagEditIcon} />
+                  </div>
                 </div>
               </div>
             </div>
@@ -111,7 +124,7 @@ const Cards = (props) => {
           onClick={() => setCardChecked(1)}
           style={{
             backgroundColor:
-              cardChecked === 1 ? theme.palette.lightGreen : null,
+              cardChecked === 1 ? theme.palette.lightGreen : theme.palette.headerBgColor,
           }}
           className={classes.paperStyling}
         >
@@ -167,20 +180,31 @@ const Cards = (props) => {
                     Tags
                   </Typography>
                 </div>
-                <div style={{ display: "flex", flexWrap: "wrap" }}>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Demo
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Sia
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Lunch
-                  </Typography>
-                </div>
-                <div>
-                  <EditOutlinedIcon className={classes.tagEditIcon} />
-                  <InfoOutlinedIcon className={classes.tagEditIcon} />
+                <div
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div style={{ display: "flex", flexWrap: "wrap" }}>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Demo
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Sia
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Lunch
+                    </Typography>
+                  </div>
+                  <div>
+                    <EditOutlinedIcon
+                      className={classes.tagEditIcon}
+                      style={{ marginRight: 8 }}
+                    />
+                    <InfoOutlinedIcon className={classes.tagEditIcon} />
+                  </div>
                 </div>
               </div>
             </div>
@@ -193,7 +217,7 @@ const Cards = (props) => {
           onClick={() => setCardChecked(2)}
           style={{
             backgroundColor:
-              cardChecked === 2 ? theme.palette.lightGreen : null,
+              cardChecked === 2 ? theme.palette.lightGreen : theme.palette.headerBgColor,
           }}
           className={classes.paperStyling}
         >
@@ -249,20 +273,31 @@ const Cards = (props) => {
                     Tags
                   </Typography>
                 </div>
-                <div style={{ display: "flex", flexWrap: "wrap" }}>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Demo
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Sia
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Lunch
-                  </Typography>
-                </div>
-                <div>
-                  <EditOutlinedIcon className={classes.tagEditIcon} />
-                  <InfoOutlinedIcon className={classes.tagEditIcon} />
+                <div
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div style={{ display: "flex", flexWrap: "wrap" }}>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Demo
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Sia
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Lunch
+                    </Typography>
+                  </div>
+                  <div>
+                    <EditOutlinedIcon
+                      className={classes.tagEditIcon}
+                      style={{ marginRight: 8 }}
+                    />
+                    <InfoOutlinedIcon className={classes.tagEditIcon} />
+                  </div>
                 </div>
               </div>
             </div>
@@ -275,7 +310,7 @@ const Cards = (props) => {
           onClick={() => setCardChecked(3)}
           style={{
             backgroundColor:
-              cardChecked === 3 ? theme.palette.lightGreen : null,
+              cardChecked === 3 ? theme.palette.lightGreen : theme.palette.headerBgColor,
           }}
           className={classes.paperStyling}
         >
@@ -331,20 +366,31 @@ const Cards = (props) => {
                     Tags
                   </Typography>
                 </div>
-                <div style={{ display: "flex", flexWrap: "wrap" }}>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Demo
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Sia
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Lunch
-                  </Typography>
-                </div>
-                <div>
-                  <EditOutlinedIcon className={classes.tagEditIcon} />
-                  <InfoOutlinedIcon className={classes.tagEditIcon} />
+                <div
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div style={{ display: "flex", flexWrap: "wrap" }}>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Demo
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Sia
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Lunch
+                    </Typography>
+                  </div>
+                  <div>
+                    <EditOutlinedIcon
+                      className={classes.tagEditIcon}
+                      style={{ marginRight: 8 }}
+                    />
+                    <InfoOutlinedIcon className={classes.tagEditIcon} />
+                  </div>
                 </div>
               </div>
             </div>

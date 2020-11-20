@@ -24,16 +24,29 @@ export default makeStyles((theme) => ({
     paddingBottom: "40px",
     // boxShadow: "5px 5px 9px 5px #E6E6E6",
     boxShadow: "none",
+    backgroundColor: theme.palette.whiteBgColor,
   },
   tabsPaper_actvHstry: {
     padding: "0px",
     boxShadow: "none",
+    backgroundColor: theme.palette.whiteBgColor,
   },
   actvHstry_title: {
-    color: theme.palette.primary.textColor,
+    color: theme.palette.linksColor,
     textAlign: "left",
     fontWeight: "500",
     fontSize: "20px",
     paddingBottom: "30px",
+  },
+  search_main_div: {
+    display: "flex",
+  },
+  srch_inpt: {
+    paddingLeft: "40px",
+    backgroundColor: theme.palette.headerBgColor,
+    "&&&:focus": {
+      borderColor: "none",
+      boxShadow: "none",
+    },
   },
 }));

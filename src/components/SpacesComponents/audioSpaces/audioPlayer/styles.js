@@ -4,7 +4,9 @@ export default makeStyles((theme) => ({
   paperStyling: {
     padding: 15,
     borderRadius: 10,
-    boxShadow: "3px 3px 10px 0px rgba(50, 50, 50, 0.75)",
+    // boxShadow: "0px 0px 5px 8px rgba(50, 50, 50, 0.14)",
+    boxShadow: "0 0 10px rgba(0,0,0,.4)",
+    backgroundColor:theme.palette.headerBgColor
   },
   rootP: {
     width: 250,

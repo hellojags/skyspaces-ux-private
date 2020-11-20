@@ -50,7 +50,16 @@ const AllSpaces = (props) => {
   };
 
   return (
-    <Grid container spacing={3} style={{ width: "100%", margin: 0, }}>
+    <Grid
+      container
+      spacing={3}
+      style={{
+        width: "100%",
+        margin: 0,
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
       <Cards />
     </Grid>
   );

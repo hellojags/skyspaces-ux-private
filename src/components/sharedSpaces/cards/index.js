@@ -6,6 +6,8 @@ import VerticalSplitOutlinedIcon from "@material-ui/icons/VerticalSplitOutlined"
 import Typography from "@material-ui/core/Typography";
 import ScreenShareIcon from "@material-ui/icons/ScreenShare";
 import EditOutlinedIcon from "@material-ui/icons/EditOutlined";
+import { RiShareForwardLine } from "react-icons/ri";
+import { BiCoinStack } from "react-icons/bi";
 
 /**
  * @author
@@ -20,13 +22,13 @@ const Cards = (props) => {
       <Grid item lg={6} md={12} sm={6} xs={12}>
         <Paper className={classes.paperStyling}>
           <div className={classes.cardContainer}>
-            <VerticalSplitOutlinedIcon className={classes.spaceIcons} />
+            <BiCoinStack className={classes.spaceIcons} />
             <div className={classes.rightContentCon}>
               <div className={classes.rightSideTop}>
                 <Typography variant="span" className={classes.spaceName}>
                   Freedom Space
                 </Typography>
-                <ScreenShareIcon className={classes.shareIconColor} />
+                <RiShareForwardLine className={classes.shareIconColor} />
               </div>
               <div style={{ paddingTop: 20, paddingBottom: 10 }}>
                 <Typography variant="span" className={classes.createAt}>
@@ -67,19 +69,27 @@ const Cards = (props) => {
                     Tags
                   </Typography>
                 </div>
-                <div style={{ display: "flex", flexWrap: "wrap" }}>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Demo
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Sia
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Lunch
-                  </Typography>
-                </div>
-                <div>
-                  <EditOutlinedIcon className={classes.tagEditIcon} />
+                <div
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div style={{ display: "flex", flexWrap: "wrap" }}>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Demo
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Sia
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Lunch
+                    </Typography>
+                  </div>
+                  <div>
+                    <EditOutlinedIcon className={classes.tagEditIcon} />
+                  </div>
                 </div>
               </div>
             </div>
@@ -89,13 +99,13 @@ const Cards = (props) => {
       <Grid item lg={6} md={12} sm={6} xs={12}>
         <Paper className={classes.paperStyling}>
           <div className={classes.cardContainer}>
-            <VerticalSplitOutlinedIcon className={classes.spaceIcons} />
+            <BiCoinStack className={classes.spaceIcons} />
             <div className={classes.rightContentCon}>
               <div className={classes.rightSideTop}>
                 <Typography variant="span" className={classes.spaceName}>
                   Freedom Space
                 </Typography>
-                <ScreenShareIcon className={classes.shareIconColor} />
+                <RiShareForwardLine className={classes.shareIconColor} />
               </div>
               <div style={{ paddingTop: 20, paddingBottom: 10 }}>
                 <Typography variant="span" className={classes.createAt}>
@@ -136,19 +146,27 @@ const Cards = (props) => {
                     Tags
                   </Typography>
                 </div>
-                <div style={{ display: "flex", flexWrap: "wrap" }}>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Demo
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Sia
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Lunch
-                  </Typography>
-                </div>
-                <div>
-                  <EditOutlinedIcon className={classes.tagEditIcon} />
+                <div
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div style={{ display: "flex", flexWrap: "wrap" }}>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Demo
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Sia
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Lunch
+                    </Typography>
+                  </div>
+                  <div>
+                    <EditOutlinedIcon className={classes.tagEditIcon} />
+                  </div>
                 </div>
               </div>
             </div>
@@ -159,13 +177,13 @@ const Cards = (props) => {
       <Grid item lg={6} md={12} sm={6} xs={12}>
         <Paper className={classes.paperStyling}>
           <div className={classes.cardContainer}>
-            <VerticalSplitOutlinedIcon className={classes.spaceIcons} />
+            <BiCoinStack className={classes.spaceIcons} />
             <div className={classes.rightContentCon}>
               <div className={classes.rightSideTop}>
                 <Typography variant="span" className={classes.spaceName}>
                   Freedom Space
                 </Typography>
-                <ScreenShareIcon className={classes.shareIconColor} />
+                <RiShareForwardLine className={classes.shareIconColor} />
               </div>
               <div style={{ paddingTop: 20, paddingBottom: 10 }}>
                 <Typography variant="span" className={classes.createAt}>
@@ -206,19 +224,27 @@ const Cards = (props) => {
                     Tags
                   </Typography>
                 </div>
-                <div style={{ display: "flex", flexWrap: "wrap" }}>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Demo
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Sia
-                  </Typography>
-                  <Typography variant="span" className={classes.tagsBg}>
-                    Lunch
-                  </Typography>
-                </div>
-                <div>
-                  <EditOutlinedIcon className={classes.tagEditIcon} />
+                <div
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div style={{ display: "flex", flexWrap: "wrap" }}>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Demo
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Sia
+                    </Typography>
+                    <Typography variant="span" className={classes.tagsBg}>
+                      Lunch
+                    </Typography>
+                  </div>
+                  <div>
+                    <EditOutlinedIcon className={classes.tagEditIcon} />
+                  </div>
                 </div>
               </div>
             </div>

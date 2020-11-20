@@ -25,11 +25,13 @@ const AudioPlayer = (props) => {
     setValue(newValue);
   };
   return (
-    <Grid item xs={12}>
+    <Grid item xs={12} style={{ position: "sticky", bottom: 0 }}>
       <Paper className={classes.paperStyling}>
         <Grid container spacing={3} style={{ width: "100%", margin: 0 }}>
-          <Grid item xs={8}>
-            <div className={classes.sliderPlusPlayIcons}>
+          <Grid item lg={8} sm={8} xs={12} md={9}>
+            <div
+              className={`sliderPlusPlayIcons ${classes.sliderPlusPlayIcons}`}
+            >
               <div>
                 <SkipPreviousIcon className={classes.mediaPlayIcons} />
                 <PlayArrowIcon className={classes.mediaPlayIconsPlayer} />
@@ -45,33 +47,65 @@ const AudioPlayer = (props) => {
                 />
                 <span className={classes.duration}>04:32</span>
               </div>
-              <div style={{ marginLeft: 30 }}>
+              <div className="nowHudioIConsOnSmall" style={{ marginLeft: 30 }}>
                 <CachedIcon className={classes.rePlayIcon} />
               </div>
-              <div style={{ marginLeft: 30 }}>
+              <div className="nowHudioIConsOnSmall" style={{ marginLeft: 30 }}>
                 <MenuIcon className={classes.rePlayIcon} />
               </div>
             </div>
           </Grid>
-          <Grid item xs={4} style={{ display: "flex", alignItems: "center" }}>
-            <div
-              style={{
-                width: 120,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <VolumeUp className={classes.rePlayIcon} />
-              <Slider
-                style={{ marginLeft: 7 }}
-                value={value}
-                onChange={handleChange}
-                aria-labelledby="continuous-slider"
-              />
-            </div>
-            <div style={{ display: "flex", justifyContent: "flex-end",paddingLeft:5 }}>
-              <ClearIcon />
+          <Grid
+            item
+            lg={4}
+            md={3}
+            sm={4}
+            xs={12}
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            <div className="wrapAudioIConsOnSmall">
+              <div className="audioInnerDivIons1">
+                <div
+                  className="audioIConsOnSmall"
+                  style={{ marginLeft: 30, display: "none" }}
+                >
+                  <CachedIcon className={classes.rePlayIcon} />
+                </div>
+                <div
+                  className="audioIConsOnSmall setInnerRepIconMargin"
+                  style={{ marginLeft: 30, display: "none" }}
+                >
+                  <MenuIcon className={classes.rePlayIcon} />
+                </div>
+              </div>
+              <div className="volUpIcons_audioComp_main_div" style={{display:"flex"}}>
+                <div
+                  style={{
+                    width: 120,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <VolumeUp className={classes.rePlayIcon} />
+                  <Slider
+                    style={{ marginLeft: 7 }}
+                    value={value}
+                    onChange={handleChange}
+                    aria-labelledby="continuous-slider"
+                  />
+                </div>
+                <div
+                className="crossIcon_audio_comp_div"
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    paddingLeft: 5,
+                  }}
+                >
+                  <ClearIcon />
+                </div>
+              </div>
             </div>
           </Grid>
         </Grid>

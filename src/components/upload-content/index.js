@@ -14,7 +14,9 @@ import AutoComp from "./autofield/autofield";
 import Switch from "@material-ui/core/Switch";
 import DescriptionIcon from "@material-ui/icons/Description";
 import { DropzoneArea } from "material-ui-dropzone";
-import ImageIcon from "@material-ui/icons/Image";
+import { BsFileEarmarkArrowUp } from "react-icons/bs";
+import { TiAttachment } from "react-icons/ti";
+import ClearIcon from '@material-ui/icons/Clear';
 
 /**
  * @author
@@ -75,44 +77,47 @@ const AuthComponent = (props) => {
                   checked={state.checkedA}
                   onChange={handleChange}
                   name="checkedA"
-                  color="default"
+                  color="primary"
                   inputProps={{ "aria-label": "secondary checkbox" }}
                 />
               </Grid>
             </Grid>
             {/* dropzone */}
-            <Grid container spacing={3}>
+            <Grid container spacing={3} className="drpZone_main_grid">
               <Grid item xs={12}>
                 <DropzoneArea
                   filesLimit={1}
+                  showPreviewsInDropzone={false}
                   onChange={handleImage}
-                  //  className={classes.dropZonArea}
-                  Icon={ImageIcon}
+                  // className="dropZonArea"
+                  Icon={"none"}
                   maxFileSize={210000000}
                   onDelete={delImg}
                   dropzoneText={
-                    <div>
-                      <span style={{ fontSize: 14, fontWeight: "bold" }}>
-                        Drop an image here, or select a file
-                      </span>
-                      <div
+                    <div style={{ paddingTop: "20px", paddingBottom: "20px" }}>
+                      <div>
+                        <BsFileEarmarkArrowUp
+                          style={{
+                            fontSize: "55px",
+                            color: "#c5c5c5",
+                            marginBottom: "10px",
+                          }}
+                        />
+                      </div>
+                      <span
                         style={{
                           fontSize: 14,
                           fontWeight: "bold",
-                          color: "gray",
+                          color: "#c5c5c5",
                         }}
                       >
-                        It must be JPG, PNG, GIF, TIFF, or BMP, no larger than
-                        200 MB.
-                      </div>
+                        Drop a file here or
+                        <span style={{ color: "#1ed660", marginLeft: "3px" }}>
+                          click here to upload
+                        </span>
+                      </span>
                     </div>
                   }
-                  // acceptedFiles={[
-                  //   "image/jpeg",
-                  //   "image/png",
-                  //   "image/bmp",
-                  //   "image/tiff",
-                  // ]}
                 />
               </Grid>
             </Grid>
@@ -129,9 +134,36 @@ const AuthComponent = (props) => {
                 <span>
                   <DescriptionIcon className={classes.descIcon} />
                 </span>
-                <Typography className={classes.img_name_txt}>
-                  {thumbnail == "" ? "Choose a file" : thumbnail.name}
-                </Typography>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    width: "100%",
+                  }}
+                >
+                  <div style={{ display: "flex" }}>
+                    <Typography className={classes.img_name_txt}>
+                      {thumbnail == "" ? "Choose a file" : thumbnail.name}
+                    </Typography>
+                  </div>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <TiAttachment
+                      style={{
+                        fontSize: "18px",
+                        color: "#1ed660",
+                        marginRight: 10,
+                      }}
+                    />
+                    <ClearIcon
+                      style={{
+                        fontSize: "18px",
+                        color: "#1ed660",
+                        cursor: "pointer",
+                      }}
+                      onClick={() => setThumb("")}
+                    />
+                  </div>
+                </div>
               </Grid>
             </Grid>
           </Paper>

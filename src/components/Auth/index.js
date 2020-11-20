@@ -8,6 +8,7 @@ import Tab from "@material-ui/core/Tab";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import TextField from "@material-ui/core/TextField";
 import PermIdentity from "@material-ui/icons/PermIdentity";
+import LockIcon from "@material-ui/icons/Lock";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { useHistory } from "react-router-dom";
@@ -20,6 +21,8 @@ import { useHistory } from "react-router-dom";
 const AuthComponent = (props) => {
   // State
   const [value, setValue] = React.useState(1);
+  const [activeDark, setActiveDark] = React.useState(false);
+
   // Style
   const classes = useStyles();
   const history = useHistory();
@@ -29,6 +32,15 @@ const AuthComponent = (props) => {
     setValue(newValue);
   };
 
+  React.useEffect(() => {
+    let getMode = localStorage.getItem("darkMode");
+    if (getMode === "true") {
+      setActiveDark(true);
+    } else {
+      setActiveDark(false);
+    }
+  }, [localStorage.getItem("darkMode")]);
+
   return (
     <Grid
       container
@@ -37,9 +49,9 @@ const AuthComponent = (props) => {
     >
       <Grid
         item
-        lg={5}
-        md={6}
-        sm={10}
+        lg={4}
+        md={5}
+        sm={7}
         xs={12}
         className={classes.main_grid_auth}
       >
@@ -57,14 +69,42 @@ const AuthComponent = (props) => {
                 className={classes.butn_tab1}
                 active={true}
                 style={{
-                  background: `${value == 0 ? "#F3F3F3" : "white"}`,
+                  // background: `${value == 0 ? "white" : "#F3F3F3"}`,
+                  background: `${
+                    activeDark === false && value == 0
+                      ? "white"
+                      : activeDark === true && value == 0
+                      ? "#1a1b1d"
+                      : activeDark === false && value == 1
+                      ? "#f3f3f3"
+                      : activeDark === true && value == 1
+                      ? "#000000"
+                      : null
+                  }`,
+                  color: `${
+                    activeDark === true && value == 0 ? "#1ed660" : "#1ed660"
+                  }`,
                 }}
               />
               <Tab
                 label="Login"
                 className={classes.butn_tab1}
                 style={{
-                  background: `${value == 1 ? "#F3F3F3" : "white"}`,
+                  // background: `${value == 0 ? "white" : "#F3F3F3"}`,
+                  background: `${
+                    activeDark === false && value == 0
+                      ? "#f3f3f3"
+                      : activeDark === true && value == 0
+                      ? "#000000"
+                      : activeDark === false && value == 1
+                      ? "white"
+                      : activeDark === true && value == 1
+                      ? "#1a1b1d"
+                      : null
+                  }`,
+                  color: `${
+                    activeDark === true && value == 1 ? "#1ed660" : "#1ed660"
+                  }`,
                 }}
               />
             </Tabs>
@@ -81,7 +121,9 @@ const AuthComponent = (props) => {
                     InputProps={{
                       startAdornment: (
                         <InputAdornment position="start">
-                          <PermIdentity />
+                          <PermIdentity
+                            style={{ content: "none", color: "lightGray" }}
+                          />
                         </InputAdornment>
                       ),
                     }}
@@ -97,9 +139,9 @@ const AuthComponent = (props) => {
                       startAdornment: (
                         <InputAdornment
                           position="start"
-                          style={{ content: "none" }}
+                          style={{ content: "none", color: "lightGray" }}
                         >
-                          <PermIdentity />
+                          <LockIcon />
                         </InputAdornment>
                       ),
                     }}
@@ -135,7 +177,7 @@ const AuthComponent = (props) => {
                     InputProps={{
                       startAdornment: (
                         <InputAdornment position="start">
-                          <PermIdentity />
+                          <PermIdentity style={{ color: "lightGray" }} />
                         </InputAdornment>
                       ),
                     }}
@@ -151,9 +193,9 @@ const AuthComponent = (props) => {
                       startAdornment: (
                         <InputAdornment
                           position="start"
-                          style={{ content: "none" }}
+                          style={{ content: "none", color: "lightGray" }}
                         >
-                          <PermIdentity />
+                          <LockIcon />
                         </InputAdornment>
                       ),
                     }}

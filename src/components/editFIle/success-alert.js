@@ -18,12 +18,20 @@ import DoneIcon from "@material-ui/icons/Done";
 import CheckCircleOutlinedIcon from "@material-ui/icons/CheckCircleOutlined";
 
 const emails = ["username@gmail.com", "user02@gmail.com"];
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   avatar: {
     backgroundColor: blue[100],
     color: blue[600],
   },
-});
+  successMainContainer: {
+    backgroundColor: theme.palette.headerBgColor,
+  },
+  statusHeading: {
+    fontSize: "14px",
+    color: theme.palette.linksColor,
+    fontWeight: "bold",
+  },
+}));
 
 function SimpleDialog(props) {
   const classes = useStyles();
@@ -46,68 +54,66 @@ function SimpleDialog(props) {
       aria-labelledby="simple-dialog-title"
       open={open}
     >
-      <DialogTitle
-        id="simple-dialog-title"
-        style={{ padding: "20px 130px 0px 130px" }}
-      >
-        <span
-          style={{ fontSize: "14px", color: "#636f70", fontWeight: "bold" }}
+      <div className={classes.successMainContainer}>
+        <DialogTitle
+          id="simple-dialog-title"
+          style={{ padding: "20px 130px 0px 130px" }}
         >
-          Status
-        </span>
-      </DialogTitle>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          padding: "10px 0px",
-        }}
-      >
-        <CheckCircleOutlinedIcon
-          style={{ fontSize: "60px", color: "#1ed660" }}
-        />
-      </div>
-      {/* error text */}
-      <Typography
-        style={{
-          textAlign: "center",
-          color: "#1ed660",
-          fontSize: "18px",
-          fontWeight: "bold",
-        }}
-      >
-        Success
-      </Typography>
-      {/* warning text */}
-      <Typography
-        style={{
-          textAlign: "center",
-          color: "#c5c5c5",
-          fontSize: "12px",
-        }}
-      >
-        Skylink has been saved Successfully
-      </Typography>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          paddingTop: "20px",
-          paddingBottom: "20px",
-          paddingRight: "20px",
-        }}
-        onClick={handleExit}
-      >
-        <Button
-          variant="contained"
-          color="secondary"
-          className={classes.button}
-          startIcon={<DoneIcon />}
-          size="small"
-          style={{ background: "#1ed660" }}
+          <span className={classes.statusHeading}>Status</span>
+        </DialogTitle>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            padding: "10px 0px",
+          }}
         >
-          OK
-        </Button>
+          <CheckCircleOutlinedIcon
+            style={{ fontSize: "60px", color: "#1ed660" }}
+          />
+        </div>
+        {/* error text */}
+        <Typography
+          style={{
+            textAlign: "center",
+            color: "#1ed660",
+            fontSize: "18px",
+            fontWeight: "bold",
+          }}
+        >
+          Success
+        </Typography>
+        {/* warning text */}
+        <Typography
+          style={{
+            textAlign: "center",
+            color: "#c5c5c5",
+            fontSize: "12px",
+          }}
+        >
+          Skylink has been saved Successfully
+        </Typography>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+            paddingTop: "20px",
+            paddingBottom: "20px",
+            paddingRight: "20px",
+          }}
+          onClick={handleExit}
+        >
+          <Button
+            variant="contained"
+            color="secondary"
+            className={classes.button}
+            startIcon={<DoneIcon />}
+            size="small"
+            style={{ background: "#1ed660" }}
+          >
+            OK
+          </Button>
+        </div>
       </div>
     </Dialog>
   );

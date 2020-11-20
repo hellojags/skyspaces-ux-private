@@ -5,6 +5,9 @@ export default makeStyles((theme) => ({
     color: theme.palette.linksColor,
     fontSize: 20,
   },
+  filterLeftIcon:{
+    color:theme.palette.linksColor
+  },
   sharedSpaceButn: {
     color: "white",
     borderRadius: 10,
@@ -51,7 +54,10 @@ export default makeStyles((theme) => ({
   },
   paperStyling: {
     padding: 15,
-    boxShadow: "3px 3px 10px 0px rgba(50, 50, 50, 0.75)",
+    // boxShadow: "0px 0px 5px 8px rgba(50, 50, 50, 0.14)",
+    boxShadow: "0 0 10px rgba(0,0,0,.4)",
+    borderRadius: "10px",
+    backgroundColor:theme.palette.headerBgColor
   },
   rightSideTop: {
     display: "flex",
@@ -74,7 +80,7 @@ export default makeStyles((theme) => ({
   paragraph: {
     color: theme.palette.mediumGray,
     fontSize: 11.5,
-    lineHeight:"0px !important"
+    lineHeight: "0px !important",
   },
   status: {
     color: theme.palette.linksColor,

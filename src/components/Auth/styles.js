@@ -20,7 +20,9 @@ export default makeStyles((theme) => ({
   },
   MaintabsPaper: {
     padding: "0px",
-    boxShadow: "5px 5px 9px 5px #E6E6E6",
+    // boxShadow: "0px 0px 5px 8px rgba(50, 50, 50, 0.14)",
+    boxShadow: "0 0 10px rgba(0,0,0,.4)",
+    backgroundColor:theme.palette.headerBgColor
   },
   tabsPaper: {
     padding: "0px",
@@ -30,10 +32,10 @@ export default makeStyles((theme) => ({
     margin: theme.spacing(1),
   },
   mail_textfield: {
-    border: `3px solid ${theme.palette.mediumGray}`,
+    border: `2px solid ${theme.palette.mediumGray}`,
     marginTop: "40px",
     BorderBottom: "none",
-    padding: "3px 10px",
+    padding: "2px 10px",
     borderRadius: "8px",
     width: "63%",
   },
@@ -47,7 +49,7 @@ export default makeStyles((theme) => ({
   },
 
   password_textfield: {
-    border: `3px solid ${theme.palette.mediumGray}`,
+    border: `2px solid ${theme.palette.mediumGray}`,
     BorderBottom: "none",
     padding: "3px 10px",
     borderRadius: "8px",
@@ -77,6 +79,9 @@ export default makeStyles((theme) => ({
     fontWeight: "600",
     marginTop: "20px",
     marginBottom: "40px",
+    "&&&:focus": {
+      outline: "none",
+    },
   },
   description_auth: {
     paddingTop: "35px !important",

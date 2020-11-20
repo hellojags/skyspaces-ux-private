@@ -27,14 +27,38 @@ const AuthComponent = (props) => {
           <Paper className={classes.tabsPaper_actvHstry}>
             <Grid container spacing={3} style={{ paddingBottom: "10px" }}>
               <Grid item xs={12}>
-                <Typography className={classes.actvHstry_title}>
-                  Activity History
-                </Typography>
+                <div
+                  style={{
+                    paddingTop: "40px",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <Typography className={classes.actvHstry_title}>
+                    Activity History
+                  </Typography>
+                  {/* search */}
+                  <div className={classes.search_main_div}>
+                    <span>
+                      <i
+                        className="fas fa-search srch-icon-inside-field-input"
+                        style={{ position: "relative", top: "8px" }}
+                      ></i>
+                    </span>
+
+                    <input
+                      className={`form-control mr-sm-2 ${classes.srch_inpt}`}
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                  </div>
+                </div>
                 <div
                   style={{
                     display: "flex",
                     justifyContent: "center",
-                    boxShadow: "5px 5px 9px 5px #E6E6E6",
+                    boxShadow: "0 0 10px rgba(0,0,0,.4)",
                     borderRadius: "10px",
                   }}
                 >

@@ -171,6 +171,7 @@ function EnhancedTableHead(props) {
       <TableRow>
         <TableCell padding="checkbox">
           <Checkbox
+            className={classes.cellColor}
             indeterminate={numSelected > 0 && numSelected < rowCount}
             checked={rowCount > 0 && numSelected === rowCount}
             onChange={onSelectAllClick}
@@ -179,6 +180,7 @@ function EnhancedTableHead(props) {
         </TableCell>
         {headCells.map((headCell) => (
           <TableCell
+            className={classes.cellColor}
             key={headCell.id}
             align={headCell.numeric ? "center" : "left"}
             style={{ paddingLeft: "17px" }}
@@ -297,6 +299,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     width: "100%",
     marginBottom: theme.spacing(2),
+    backgroundColor:theme.palette.headerBgColor
   },
   table: {
     minWidth: 750,
@@ -312,6 +315,9 @@ const useStyles = makeStyles((theme) => ({
     top: 20,
     width: 1,
   },
+  cellColor:{
+    color:theme.palette.linksColor
+  }
 }));
 
 export default function EnhancedTable() {
@@ -410,13 +416,18 @@ export default function EnhancedTable() {
                       key={row.fileName}
                       selected={isItemSelected}
                     >
-                      <TableCell padding="checkbox">
+                      <TableCell
+                        padding="checkbox"
+                        className={classes.cellColor}
+                      >
                         <Checkbox
+                          className={classes.cellColor}
                           checked={isItemSelected}
                           inputProps={{ "aria-labelledby": labelId }}
                         />
                       </TableCell>
                       <TableCell
+                        className={classes.cellColor}
                         component="th"
                         id={labelId}
                         scope="row"
@@ -424,9 +435,15 @@ export default function EnhancedTable() {
                       >
                         {row.portalName}
                       </TableCell>
-                      <TableCell align="center">{row.portalUrl}</TableCell>
-                      <TableCell align="center">{row.portalType}</TableCell>
-                      <TableCell align="center">{row.actions}</TableCell>
+                      <TableCell className={classes.cellColor} align="center">
+                        {row.portalUrl}
+                      </TableCell>
+                      <TableCell className={classes.cellColor} align="center">
+                        {row.portalType}
+                      </TableCell>
+                      <TableCell className={classes.cellColor} align="center">
+                        {row.actions}
+                      </TableCell>
                     </TableRow>
                   );
                 })}
@@ -434,6 +451,7 @@ export default function EnhancedTable() {
           </Table>
         </TableContainer>
         <TablePagination
+          className={classes.cellColor}
           rowsPerPageOptions={[5, 10, 25]}
           component="div"
           count={rows.length}

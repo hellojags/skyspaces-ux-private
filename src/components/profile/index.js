@@ -60,18 +60,7 @@ const ProfileMain = (props) => {
               />
             </div>
           </Grid>
-          <Grid
-            item
-            xs={12}
-            style={{
-              padding: 0,
-              backgroundColor: "white",
-              marginLeft: 200,
-              // marginBottom: 80,
-              paddingTop: 20,
-              paddingBottom: 20,
-            }}
-          >
+          <Grid className={classes.followingBgColor} item xs={12}>
             <div className={classes.listOfProfile}>
               <div>
                 <Typography
@@ -157,109 +146,6 @@ const ProfileMain = (props) => {
               </div>
             </div>
           </Grid>
-
-          <Grid
-            item
-            xs={12}
-            style={{
-              padding: 0,
-              marginLeft: 170,
-              paddingTop: 20,
-              paddingBottom: 20,
-            }}
-          >
-            <div style={{ display: "flex" }}>
-              <div>
-                <Typography variant="span" className={classes.profileUserName}>
-                  Alexandra
-                </Typography>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  paddingLeft: 30,
-                }}
-              >
-                <div className={classes.tabsName}>
-                  <Typography
-                    variant="span"
-                    style={{
-                      paddingBottom: 10,
-                      borderBottom:
-                        activeTab === 0 &&
-                        `2px solid ${theme.palette.primary.main}`,
-                    }}
-                    // className={classes.tabsName}
-                    onClick={() => setActiveTab(0)}
-                  >
-                    Public Space
-                  </Typography>
-                </div>
-                <div
-                  className={classes.tabsName}
-                  style={{
-                    borderBottom:
-                      activeTab === 1 &&
-                      `2px solid ${theme.palette.primary.main}`,
-                  }}
-                  onClick={() => setActiveTab(1)}
-                >
-                  <Typography variant="span">Image</Typography>
-                </div>
-                <div
-                  className={classes.tabsName}
-                  style={{
-                    borderBottom:
-                      activeTab === 2 &&
-                      `2px solid ${theme.palette.primary.main}`,
-                  }}
-                  onClick={() => setActiveTab(2)}
-                >
-                  <Typography variant="span">Videos</Typography>
-                </div>
-                <div
-                  className={classes.tabsName}
-                  style={{
-                    borderBottom:
-                      activeTab === 3 &&
-                      `2px solid ${theme.palette.primary.main}`,
-                  }}
-                  onClick={() => setActiveTab(3)}
-                >
-                  <Typography variant="span">Documents</Typography>
-                </div>
-              </div>
-              <div
-                className="search_main_div"
-                style={{
-                  width: "40%",
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "center",
-                  marginLeft: 20,
-                }}
-              >
-                <span>
-                  <i
-                    className="fas fa-search srch-icon-inside-field-input"
-                    style={{
-                      position: "relative",
-                      left: "32px",
-                      top: "0px",
-                    }}
-                  ></i>
-                </span>
-
-                <input
-                  className="form-control mr-sm-2 srch_inpt"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-              </div>
-            </div>
-          </Grid>
         </>
       ) : (
         <>
@@ -278,121 +164,245 @@ const ProfileMain = (props) => {
               Alexandra
             </Typography>
           </Grid>
-          {/* <Grid
+
+          <Grid
             item
             xs={12}
             style={{
               padding: 0,
-              marginLeft: 170,
-              paddingTop: 20,
-              paddingBottom: 20,
+              backgroundColor: "white",
+
+              // paddingTop: 20,
+              // paddingBottom: 20,
             }}
           >
-            <div style={{ display: "flex" }}>
-              <div>
-                <Typography variant="span" className={classes.profileUserName}>
-                  Alexandra
+            <div className={classes.listOfProfileForMobile}>
+              <div className={classes.settinTopBottom}>
+                <Typography
+                  variant="span"
+                  className={classes.profileListHeadings}
+                >
+                  FOLLOWING
                 </Typography>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  paddingLeft: 30,
-                }}
-              >
-                <div className={classes.tabsName}>
+                <div>
                   <Typography
                     variant="span"
-                    style={{
-                      paddingBottom: 10,
-                      borderBottom:
-                        activeTab === 0 &&
-                        `2px solid ${theme.palette.primary.main}`,
-                    }}
-                    // className={classes.tabsName}
-                    onClick={() => setActiveTab(0)}
+                    className={classes.profileListCounts}
                   >
-                    Public Space
+                    472
                   </Typography>
                 </div>
-                <div
-                  className={classes.tabsName}
-                  style={{
-                    borderBottom:
-                      activeTab === 1 &&
-                      `2px solid ${theme.palette.primary.main}`,
-                  }}
-                  onClick={() => setActiveTab(1)}
+              </div>
+              <div className={classes.settinTopBottom}>
+                <Typography
+                  variant="span"
+                  className={classes.profileListHeadings}
                 >
-                  <Typography variant="span">Image</Typography>
+                  FOLLOWERS
+                </Typography>
+                <div>
+                  <Typography
+                    variant="span"
+                    className={classes.profileListCounts}
+                  >
+                    11
+                  </Typography>
                 </div>
-                <div
-                  className={classes.tabsName}
-                  style={{
-                    borderBottom:
-                      activeTab === 2 &&
-                      `2px solid ${theme.palette.primary.main}`,
-                  }}
-                  onClick={() => setActiveTab(2)}
+              </div>
+              <div className={classes.settinTopBottom}>
+                <Typography
+                  variant="span"
+                  className={classes.profileListHeadings}
                 >
-                  <Typography variant="span">Videos</Typography>
+                  STORAGE
+                </Typography>
+                <div>
+                  <Typography
+                    variant="span"
+                    className={classes.profileListCounts}
+                  >
+                    57 MB
+                  </Typography>
                 </div>
-                <div
-                  className={classes.tabsName}
-                  style={{
-                    borderBottom:
-                      activeTab === 3 &&
-                      `2px solid ${theme.palette.primary.main}`,
-                  }}
-                  onClick={() => setActiveTab(3)}
+              </div>
+              <div className={classes.settinTopBottom}>
+                <Typography
+                  variant="span"
+                  className={classes.profileListHeadings}
                 >
-                  <Typography variant="span">Documents</Typography>
+                  UPLOAD
+                </Typography>
+                <div>
+                  <Typography
+                    variant="span"
+                    className={classes.profileListCounts}
+                  >
+                    21
+                  </Typography>
                 </div>
               </div>
               <div
-                className="search_main_div"
+                className={`stngTopFollowingbtn ${classes.settinTopBottom}`}
                 style={{
-                  width: "40%",
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "center",
-                  marginLeft: 20,
+                  marginRight: 20,
                 }}
               >
-                <span>
-                  <i
-                    className="fas fa-search srch-icon-inside-field-input"
-                    style={{
-                      position: "relative",
-                      left: "32px",
-                      top: "0px",
-                    }}
-                  ></i>
-                </span>
-
-                <input
-                  className="form-control mr-sm-2 srch_inpt"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  className={`followingButton ${classes.followingButton}`}
+                  startIcon={<PersonOutlineIcon />}
+                >
+                  FOLLOWING
+                </Button>
               </div>
             </div>
-          </Grid> */}
+          </Grid>
         </>
       )}
 
       {/* for tab or mobile mode */}
+      <Grid
+        container
+        spacing={3}
+        style={{
+          width: "95%",
+          margin: "auto",
+          paddingTop: 20,
+          // backgroundColor: theme.palette.lightGray,
+        }}
+      >
+        <Grid
+          item
+          lg={3}
+          xs={12}
+          md={6}
+          sm={12}
+          style={{
+            marginTop: 69,
+          }}
+        >
+          <LeftSideBar />
+        </Grid>
+        <Grid item lg={6} xs={12} md={6} sm={12} className="cenetr_prfl_grid">
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginBottom: 30,
+              flexWrap: "wrap",
+              padding: 0,
+            }}
+          >
+            <div className={`tabsName ${classes.tabsName}`}>
+              <Typography
+                variant="span"
+                style={{
+                  color: theme.palette.linksColor,
+                  fontWeight: 500,
+                  paddingBottom: 10,
+                  borderBottom:
+                    activeTab === 0 &&
+                    `2px solid ${theme.palette.primary.main}`,
+                }}
+                // className={classes.tabsName}
+                onClick={() => setActiveTab(0)}
+              >
+                Public Space
+              </Typography>
+            </div>
+            <div
+              className={classes.tabsName}
+              style={{
+                borderBottom:
+                  activeTab === 1 && `2px solid ${theme.palette.primary.main}`,
+              }}
+              onClick={() => setActiveTab(1)}
+            >
+              <Typography
+                variant="span"
+                style={{
+                  fontWeight: 500,
+                  color: theme.palette.linksColor,
+                }}
+              >
+                Image
+              </Typography>
+            </div>
+            <div
+              className={classes.tabsName}
+              style={{
+                borderBottom:
+                  activeTab === 2 && `2px solid ${theme.palette.primary.main}`,
+              }}
+              onClick={() => setActiveTab(2)}
+            >
+              <Typography
+                variant="span"
+                style={{
+                  fontWeight: 500,
+                  color: theme.palette.linksColor,
+                }}
+              >
+                Videos
+              </Typography>
+            </div>
+            <div
+              className={classes.tabsName}
+              style={{
+                borderBottom:
+                  activeTab === 3 && `2px solid ${theme.palette.primary.main}`,
+              }}
+              onClick={() => setActiveTab(3)}
+            >
+              <Typography
+                variant="span"
+                style={{
+                  fontWeight: 500,
+                  color: theme.palette.linksColor,
+                }}
+              >
+                Documents
+              </Typography>
+            </div>
+          </div>
+          <div className={classes.centerBar}>{getStepContent(activeTab)}</div>
+        </Grid>
+        <Grid item lg={3} xs={12} md={12} sm={12}>
+          <div
+            className="search_main_div_changed"
+            style={{
+              // width: "40%",
+              display: "flex",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              marginBottom: 30,
+              // marginLeft: 20,
+            }}
+          >
+            <span style={{ position: "relative" }}>
+              <i
+                className="fas fa-search srch-icon-inside-field-input"
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  bottom: 0,
+                  marginTop: -9,
+                  marginLeft: 11,
+                }}
+              ></i>
+            </span>
 
-      <Grid item lg={3} xs={12} md={6} sm={12}>
-        <LeftSideBar />
-      </Grid>
-      <Grid item lg={5} xs={12} md={6} sm={12}>
-        {getStepContent(activeTab)}
-      </Grid>
-      <Grid item lg={4} xs={12} md={12} sm={12}>
-        <RightSideBar />
+            <input
+              className={`form-control mr-sm-2 srch_inpt ${classes.searchBgColor}`}
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </div>
+          <RightSideBar />
+        </Grid>
       </Grid>
     </Grid>
   );

@@ -35,6 +35,7 @@ const AuthComponent = (props) => {
   const handleClick = (e) => {
     let arr = [...selectedImagesLength, e.target.name];
     setImageStatus(!imageStatus);
+    props.handleUploadSection(!imageStatus);
 
     if (imageStatus == false) {
       setSelectedImagesLength(arr);
@@ -55,9 +56,11 @@ const AuthComponent = (props) => {
       spacing={3}
       className={` most_main_grid_gallery ${classes.most_main_grid_gallery}`}
     >
-      <Grid item xs={12} className={classes.main_grid_gallery}
-      style={{paddingTop:"0px"}}
-      
+      <Grid
+        item
+        xs={12}
+        className={classes.main_grid_gallery}
+        style={{ paddingTop: "0px" }}
       >
         <Paper className={`${classes.paper} ${classes.MaintabsPaper_gallery}`}>
           <Paper className={classes.tabsPaper_gallery}>
@@ -170,6 +173,11 @@ const AuthComponent = (props) => {
                     <div style={{ textAlign: "right" }}>
                       {selectedImagesLength.length} Selected
                       <ClearOutlinedIcon
+                        onClick={() => {
+                          setImageStatus(!imageStatus);
+                          props.handleUploadSection(!imageStatus);
+                          setSelectedImagesLength([]);
+                        }}
                         style={{
                           color: "#1ed660",
                           fontSize: "18px",
@@ -208,7 +216,7 @@ const AuthComponent = (props) => {
                   style={{
                     width: "100%",
                     height: "250px",
-                    border: imageStatus ? "3px solid #1ed660" : null,
+                    border: imageStatus ? "2px solid #1ed660" : null,
                   }}
                   onClick={(e) => handleClick(e)}
                   name="1"

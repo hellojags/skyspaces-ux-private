@@ -93,66 +93,150 @@
     width: 100% !important;
   }
 }
+.drpZone_main_grid .MuiDropzoneArea-icon {
+  color: #c5c5c5 !important;
+}
+.drpZone_main_grid .MuiDropzoneArea-root {
+  min-height: unset !important;
+  border-radius: 10px !important;
+}
+
+.drpZone_main_grid .MuiDropzoneArea-root:focus {
+  outline: none !important;
+}
 
 .MuiSelect-select.MuiSelect-select {
   background-color: transparent !important;
 }
 
-
-.sliderContainer button{
- box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75);
- border-radius: 50px !important;
-
+.sliderContainer button {
+  /* box-shadow: 0px 0px 5px 8px rgba(50, 50, 50, 0.14); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-radius: 50px !important;
 }
 
-.slick-prev{
+.slick-prev {
   /* position: relative; */
   /* right: 10px; */
 }
-
-.slick-next:before,.slick-prev:before{
+.PrivateTabIndicator-colorPrimary-22 {
+  background-color: unset !important;
+}
+.slick-next:before,
+.slick-prev:before {
   color: #1ed660;
   opacity: 1 !important;
   /* background-color: transparent; */
 }
 
-.logoAlignMent{
+.logoAlignMent {
   display: flex;
   justify-content: flex-end;
   /* padding-right:20px; */
 }
 
-.menu-button-styling{
+.menu-button-styling {
   display: none !important;
 }
 
 @media only screen and (max-width: 950px) {
-.menu-button-styling{
-  display: block !important;
-}
-
+  .menu-button-styling {
+    display: block !important;
+  }
 }
 @media only screen and (max-width: 767px) {
-
-  .navi-brnd{
+  .navi-brnd {
     display: none !important;
     /* width: auto !important; */
   }
-  .icon_download_nvbar{
+  .icon_download_nvbar {
     display: none !important;
   }
 }
 @media only screen and (max-width: 598px) {
-.gallery_title_head_Alltext{
-  margin-top: 10px !important;
+  .gallery_title_head_Alltext {
+    margin-top: 10px !important;
+  }
+
+  .gallery_title_head_image_text,
+  .menu_icon_top {
+    margin-top: 10px !important;
+  }
+  .most_main_grid_gallery_style {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .cenetr_prfl_grid {
+    padding: 0px !important;
+  }
+  .main_crad_prfl_grid {
+    padding: 0px !important;
+  }
+}
+.most_main_grid_auth .MuiTabs-indicator {
+  display: none;
 }
 
-.gallery_title_head_image_text,.menu_icon_top{
-  margin-top: 10px !important;
+@media only screen and (max-width: 500px) {
+  .cenetr_prfl_grid {
+    padding: 0px !important;
+  }
+  .main_crad_prfl_grid {
+    padding: 12px 0px 12px 0px !important;
+  }
+  .cenetr_prfl_grid .tabsName {
+    padding-right: unset !important;
+  }
+  .stngTopFollowingbtn {
+    display: flex;
+    justify-content: center !important;
+    width: 100%;
+  }
+  .followingButton {
+    width: 80% !important;
+  }
 }
-.most_main_grid_gallery_style{
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
+
+.MuiSwitch-track {
+  background-color: gray !important;
+  opacity: 1 !important;
 }
+
+.MuiSwitch-colorPrimary.Mui-checked + .MuiSwitch-track {
+  background-color: #1ed660 !important;
+}
+
+.jFXjlY svg {
+  font-size: 20px !important;
+}
+@media only screen and (max-width: 599px) {
+  .audioIConsOnSmall {
+    display: block !important;
+    margin-left: 0px !important;
+  }
+  .nowHudioIConsOnSmall {
+    display: none;
+  }
+  .sliderPlusPlayIcons {
+    display: flex;
+    justify-content: space-between;
+  }
+  .wrapAudioIConsOnSmall {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .audioInnerDivIons1 {
+    display: flex;
+  }
+  .setInnerRepIconMargin {
+    padding-left: 30px;
+  }
+  .volUpIcons_audioComp_main_div {
+    display: flex;
+  }
+  .crossIcon_audio_comp_div {
+    padding-left: 30px !important;
+  }
 }

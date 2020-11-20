@@ -52,8 +52,8 @@ const RightSideBar = (props) => {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 2,
+    slidesToScroll: 2,
     arrows: true,
     initialSlide: 0,
     responsive: [
@@ -94,8 +94,8 @@ const RightSideBar = (props) => {
           FOLLOWING
         </Typography>
         <div
+        className={classes.sliderContainer}
           style={{
-            backgroundColor: "white",
             paddingLeft: 55,
             paddingRight: 50,
             paddingTop: 30,
@@ -180,14 +180,14 @@ const RightSideBar = (props) => {
           FOLLOWERS
         </Typography>
         <div
-          style={{
-            backgroundColor: "white",
-            paddingLeft: 55,
-            paddingRight: 50,
-            paddingTop: 30,
-            paddingBottom: 30,
-            marginTop: 20,
-          }}
+         className={classes.sliderContainer}
+         style={{
+           paddingLeft: 55,
+           paddingRight: 50,
+           paddingTop: 30,
+           paddingBottom: 30,
+           marginTop: 20,
+         }}
           className="sliderContainer"
         >
           <Slider {...settings}>

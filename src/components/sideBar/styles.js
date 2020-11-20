@@ -10,10 +10,14 @@ export default makeStyles((theme) => ({
   },
   spaceIcon: {
     color: theme.palette.primary.main,
+    fontSize: "20px",
   },
   spacesLink: {
     color: theme.palette.primary.main,
     paddingLeft: 30,
+  },
+  iconStyling: {
+    fontSize: "20px",
   },
   spacesCont: {
     display: "flex",
@@ -37,10 +41,15 @@ export default makeStyles((theme) => ({
     color: theme.palette.mediumGray,
   },
   shareIconStyle: {
-    fontSize: 20,
+    fontSize: 15,
     color: theme.palette.mediumGray,
   },
-
+  list: {
+    width: 295,
+  },
+  fullList: {
+    width: "auto",
+  },
   spaceBookIcon: {
     fontSize: 15,
     color: theme.palette.mediumGray,
@@ -72,18 +81,29 @@ export default makeStyles((theme) => ({
     margin: "auto",
     width: "80%",
   },
+  sideNavContainerForDrawer: {
+    paddingTop: 20,
+    margin: "auto",
+    width: "80%",
+  },
   drawerPaper: {
-    width: 320,
+    width: 295,
     borderRight: "none",
+    backgroundColor: theme.palette.lightGray,
+  },
+  mainExampleDrawer: {
     backgroundColor: theme.palette.lightGray,
   },
   content: {
     [theme.breakpoints.up("sm")]: {
-      width: `calc(100% - ${340}px)`,
-      marginLeft: 320,
+      width: `calc(100% - ${295}px)`,
+      marginLeft: 295,
     },
     backgroundColor: theme.palette.whiteBgColor,
     padding: theme.spacing(3),
+  },
+  contentBgColor: {
+    backgroundColor: theme.palette.whiteBgColor,
   },
   content2: {
     [theme.breakpoints.up("sm")]: {
@@ -93,8 +113,36 @@ export default makeStyles((theme) => ({
   },
   drawer: {
     [theme.breakpoints.up("sm")]: {
-      width: 320,
+      width: 295,
       flexShrink: 0,
     },
+  },
+  sideProf_div: {
+    marginTop: "20px",
+    height: "120px",
+    background: "white",
+    overflowY: "scroll",
+    paddingBottom: "20px",
+    backgroundColor: theme.palette.whiteBgColor,
+  },
+  innerSideProf_div: {
+    display: "flex",
+    padding: "20px",
+  },
+  innerSideProf2_div: {
+    display: "flex",
+    padding: "0px 20px 0px 20px",
+  },
+  icon_sub_title_div: {
+    fontSize: "11px",
+    padding: "3px 0px 0px 20px",
+    color: `${theme.palette.secondary.textColor}`,
+  },
+  sharedSpace_names: {
+    color: theme.palette.linksColor,
+  },
+  image_logo_sideBarfooter: {
+    display: "flex",
+    justifyContent: "center",
   },
 }));

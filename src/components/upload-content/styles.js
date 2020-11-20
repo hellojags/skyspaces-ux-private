@@ -17,28 +17,37 @@ export default makeStyles((theme) => ({
   main_grid_uc: {
     margin: "auto",
   },
+
   MaintabsPaper_uc: {
-    paddingTop: "10px",
+    backgroundColor: theme.palette.headerBgColor,
+    paddingTop: "25px",
     // paddingLeft: "35px",
     paddingRight: "35px",
     paddingBottom: "40px",
-    boxShadow: "5px 5px 9px 5px #E6E6E6",
+    // boxShadow: "0px 0px 5px 8px rgba(50, 50, 50, 0.14)",
+    boxShadow: "0 0 10px rgba(0,0,0,.4)",
+
+    borderRadius: "10px",
   },
   tabsPaper_uc: {
     padding: "0px",
     boxShadow: "none",
+    backgroundColor: theme.palette.headerBgColor,
   },
   uc_title: {
-    color: theme.palette.primary.textColor,
+    color: theme.palette.linksColor,
     textAlign: "left",
+    fontSize: "17px",
+    fontWeight: "500",
   },
   tags_inpt_main_grid: {
     padding: "20px 0px",
   },
-  dropzone_image_uc_form: {
-    border: `3px dashed ${theme.palette.secondary.textColor}`,
-  },
+  // dropzone_image_uc_form: {
+  //   border: `3px dashed ${theme.palette.secondary.textColor}`,
+  // },
   show_img_title_grid: {
+    width: "100%",
     marginTop: "25px",
     marginLeft: "15px",
     padding: "3px 10px !important",
