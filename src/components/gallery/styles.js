@@ -28,7 +28,7 @@ export default makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
     minWidth: 120,
-    marginRight: 20,
+    // marginRight: 20,
   },
   icon: {
     color: theme.palette.primary.main,

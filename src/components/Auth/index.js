@@ -115,7 +115,7 @@ const AuthComponent = (props) => {
               <Grid item lg={12} className={classes.mail_inpt_grid}>
                 <div>
                   <TextField
-                    className={`${classes.margin} ${classes.mail_textfield}`}
+                    className={`setAuthDarkBack ${classes.margin} ${classes.mail_textfield}`}
                     id="input-with-icon-textfield"
                     placeholder="Username or Email"
                     InputProps={{
@@ -172,7 +172,11 @@ const AuthComponent = (props) => {
                 <div>
                   <TextField
                     className={`${classes.margin} ${classes.mail_textfield}`}
-                    id="input-with-icon-textfield"
+                    id={
+                      activeDark
+                        ? "input-with-icon-textfield"
+                        : "input-with-icon-textfieldLM"
+                    }
                     placeholder="Username or Email"
                     InputProps={{
                       startAdornment: (
@@ -187,7 +191,11 @@ const AuthComponent = (props) => {
 
                   <TextField
                     className={`${classes.margin} ${classes.password_textfield}`}
-                    id="input-with-icon-textfield"
+                    id={
+                      activeDark
+                        ? "input-with-icon-textfield"
+                        : "input-with-icon-textfieldLM"
+                    }
                     placeholder="Password"
                     InputProps={{
                       startAdornment: (

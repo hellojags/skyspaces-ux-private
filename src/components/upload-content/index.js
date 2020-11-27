@@ -29,6 +29,8 @@ const AuthComponent = (props) => {
     checkedA: false,
     checkedB: true,
   });
+  const [mode, setMode] = React.useState("");
+
   const [thumbnail, setThumb] = React.useState("");
   // Style
   const classes = useStyles();
@@ -45,6 +47,12 @@ const AuthComponent = (props) => {
   const delImg = () => {
     setThumb("");
   };
+
+ React.useEffect(() => {
+   let getFromLocal = localStorage.getItem("darkMode");
+   setMode(getFromLocal);
+ }, []);
+
   return (
     <Grid container spacing={3} className={classes.most_main_grid_uc}>
       <Grid item xs={12} className={classes.main_grid_uc}>
@@ -83,7 +91,13 @@ const AuthComponent = (props) => {
               </Grid>
             </Grid>
             {/* dropzone */}
-            <Grid container spacing={3} className="drpZone_main_grid">
+            <Grid
+              container
+              spacing={3}
+              className={
+                mode === "true" ? "changeColorOfDropZone" : "drpZone_main_grid"
+              }
+            >
               <Grid item xs={12}>
                 <DropzoneArea
                   filesLimit={1}

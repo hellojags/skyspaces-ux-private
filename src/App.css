@@ -240,3 +240,29 @@
     padding-left: 30px !important;
   }
 }
+
+#input-with-icon-textfield::placeholder {
+  color: lightgray !important;
+  font-size: 15px;
+  position: relative;
+  bottom: 1px;
+}
+/* .setDropzColor .MuiDropzoneArea-root {
+  background-color: transparent !important;
+} */
+
+.drpZone_main_grid .MuiDropzoneArea-root{
+background-color: transparent !important;
+}
+
+.changeColorOfDropZone .MuiDropzoneArea-root{
+background-color: transparent !important;
+border: 2px dashed gray !important;
+min-height: unset !important;
+border-radius: 10px !important;
+}
+
+
+.changeColorOfDropZone .MuiDropzoneArea-root:focus {
+  outline: none !important;
+}

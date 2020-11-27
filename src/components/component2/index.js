@@ -1,6 +1,14 @@
+import React from "react";
 import "./css/index.css";
 
 function Component2(props) {
+  const [mode, setMode] = React.useState("");
+
+  React.useEffect(() => {
+    let getFromLocal = localStorage.getItem("darkMode");
+    setMode(getFromLocal);
+  }, []);
+
   return (
     <div className="container-fluid">
       <div className="c2-main-div">
@@ -10,7 +18,7 @@ function Component2(props) {
             height="5em"
             viewBox="0 0 16 16"
             class="bi bi-exclamation-circle"
-            fill="lightgray"
+            fill={mode === "true" ? "#575759" : "lightgray"}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path

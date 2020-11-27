@@ -2,8 +2,10 @@
   padding-top: 40px;
 }
 
-.main-upload-component .custom-control-input:checked~.custom-control-label::before{
-  background-color:#1ed660;
+.main-upload-component
+  .custom-control-input:checked
+  ~ .custom-control-label::before {
+  background-color: #1ed660;
 }
 
 .main-cntner {
@@ -26,6 +28,17 @@
 .colum1-title-div {
   font-weight: 600;
   color: gray;
+  text-align: center;
+}
+.setColorC3 {
+  font-weight: 600;
+  text-align: center;
+  color: white !important;
+}
+.setColorinnerC3 {
+  padding-top: 20px;
+  color: gray;
+  font-size: 10px;
   text-align: center;
 }
 .secondColumn {
@@ -61,10 +74,12 @@
   color: white;
 }
 .colum2-icon-dwnload {
-  padding-left: 2px;
-  padding-right: 2px;
   position: relative;
   right: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
 }
 .col1-dnd-div {
   padding-top: 20px;
@@ -114,13 +129,24 @@
 }
 .col1-dnd-div .MuiDropzoneArea-root {
   min-height: auto;
+  outline: none !important;
+  background-color: transparent !important;
+}
+.setDropzColor {
+  padding-top: 20px;
+  width: 50%;
+  margin: auto;
+}
+.setDropzColor .MuiDropzoneArea-root {
+  min-height: auto;
+  outline: none !important;
+  border: 2px dashed gray;
+  background-color: transparent !important;
 }
 .MuiTypography-h5 {
   font-size: unset !important;
 }
-.col1-dnd-div .MuiDropzoneArea-root {
-  outline: none !important;
-}
+
 @media only screen and (max-width: 767px) {
   .main-cntner {
     width: 100%;

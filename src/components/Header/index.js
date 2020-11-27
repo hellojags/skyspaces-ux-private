@@ -8,6 +8,8 @@ import MenuIcon from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
 import SmallLogo from "./images/smLogo.png";
 import Drawer from "../drawer";
+import { FiDownload } from "react-icons/fi";
+
 // import classes from "*.module.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -128,7 +130,8 @@ function Component1(props) {
                     <div className="srch_btn_main_div">
                       <button className="btn srch_btn_nvbar">
                         <label for="hidden-search-inpt">
-                          <i className="fa fa-download icon_download_nvbar"></i>
+                          {/* <i className="fa fa-download icon_download_nvbar"></i> */}
+                          <FiDownload className="icon_download_nvbar" />
                         </label>
                       </button>
                       <input type="file" id="hidden-search-inpt" />

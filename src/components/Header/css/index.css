@@ -107,7 +107,7 @@
 }
 .butn-out-signup {
   border-radius: 7px;
-  background-color: white;
+  background-color: transparent;
   color: #1dd65f;
   border: 1x solid #1dd65f;
   padding: 7px 15px 7px 15px;
